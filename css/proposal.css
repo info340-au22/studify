@@ -1,1 +1,22 @@
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
 
+slogan{
+    font-size: medium;
+}
+
+header {
+    padding: .5rem 0;
+}
+
+section{
+    margin: .5rem 0;
+    padding: .5rem;
+    border: 1px solid gray;
+}
+
+footer {
+    padding-top: 1rem;
+    font-size: 80%;
+}
