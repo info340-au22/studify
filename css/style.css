@@ -1,1 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+h1, p {
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    height: 2em;
+    /* border: solid 1px black; */
+    padding: 0 1em 0 .5em;
+}
+
+.navbar {
+    background: rgb(106,255,208);
+    background: linear-gradient(90deg, rgba(106,255,208,1) 0%, rgba(86,193,227,1) 50%, rgba(106,148,230,1) 100%);
+}
