@@ -1,1 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+h1, p {
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    height: 2em;
+    /* border: solid 1px black; */
+    padding: 0 1em 0 .5em;
+}
