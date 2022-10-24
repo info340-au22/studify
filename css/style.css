@@ -118,8 +118,10 @@ h1.group {
 }
 
 img {
-    width:  100px;
-    height: 100px;
+    display: block;
+    margin: auto;
+    width:100px;
+    height:100px;
 }
 
 main > div div div div p {
