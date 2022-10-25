@@ -300,3 +300,128 @@ p.footer-links a {
         text-decoration: underline;
     }
 }
+
+/* html {
+    height: 100%;
+}
+
+main > div {
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+} */
+
+/*My Profile*/
+/* h1 {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type=save], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type=save]:hover {
+    background-color: #4580a0;
+}
+
+div.box_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} */
+
+/*My Group*/
+/* h1.group {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: auto) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 0 8px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.group_description {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.card {
+    position:relative;
+    border: 3px solid #dbe4ed;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width:100px;
+    height:100px;
+}
+
+main > div div div div p {
+    padding: 0.5rem 1rem;
+}
+
+main > div div div img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+} */
