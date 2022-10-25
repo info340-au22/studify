@@ -71,7 +71,7 @@ h1.group {
     padding: 0 8px;
 }
 
-@media screen and (max-width: auto) {
+@media screen and (max-width: 670px) {
     .column {
       width: 100%;
       display: block;
