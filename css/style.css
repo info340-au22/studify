@@ -206,23 +206,23 @@ h2.group {
     border: 3px solid #dbe4ed;
 }
 
-/* img {
+.my-group-img {
     display: block;
     margin: auto;
     width:100px;
     height:100px;
-} */
+}
 
-/* main > div div div div p {
+main > div div div div p {
     padding: 0.5rem 1rem;
-} */
+}
 
-/* main > div div div img {
+main > div div div img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-} */
+}
 
 /* Footer */
   
