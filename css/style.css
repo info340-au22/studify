@@ -314,7 +314,7 @@ main > div {
 } */
 
 /*My Profile*/
-/* h1 {
+/* group {
     text-align: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -349,7 +349,7 @@ div.box_container {
 } */
 
 /*My Group*/
-/* h1.group {
+h2.group {
     text-align: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -424,4 +424,4 @@ main > div div div img {
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-} */
+}

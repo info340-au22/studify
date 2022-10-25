@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Studify - My Group</title>
+        <meta charset="utf-8">
+        <title>Studify</title>
+        <meta name="description" content="Stutify Study Schedule">
+        <meta name="author" content="Minh Mai, Luong Quan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <div class="my_group">
-                <h1 class="group">My Groups</h1>
-            </div>
+            
+            <nav class="navbar sticky-top navbar-expand-lg bg-light">
+                <div class="container-fluid">                
+                    <a class="navbar-brand" href="#"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">My Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Profile</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Mission</a></li>
+                                    <li><a class="dropdown-item" href="#">Creators</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>Studify</h1>
         </header>
         <main>
+            <div class="my_group">
+                <h2 class="group">My Groups</h2>
+            </div>
             <div class="row">
                 <!--First group-->
                 <div class="column">
                     <div class="card">
-                        <img src="../project-mcm2304/img/developing.jpg" alt="developing" style="width:fit-content">
+                        <img src="img/developing.jpg" alt="developing" style="width:fit-content">
                         <div class="container">
-                            <h2 class="group_name">Developing Group</h2>
+                            <h3 class="group_name">Developing Group</h3>
                             <p class="group_description">Developing and Coding</p>
                             <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
                             <p><button class="button">Join Group</button></p>
@@ -29,9 +70,9 @@
                 <!--Second group-->
                 <div class="column">
                     <div class="card">
-                        <img src="../project-mcm2304/img/art-group.jpg" alt="art" style="width:fit-content">
+                        <img src="img/art-group.jpg" alt="art" style="width:fit-content">
                         <div class="container">
-                            <h2 class="group_name">Art Group</h2>
+                            <h3 class="group_name">Art Group</h3>
                             <p class="group_description">All about arts</p>
                             <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
                             <p><button class="button">Join Group</button></p>
@@ -42,9 +83,9 @@
                 <!--Third group-->
                 <div class="column">
                     <div class="card">
-                        <img src="../project-mcm2304/img/data-science.jpg" alt="datascience" style="width:fit-content">
+                        <img src="img/data-science.jpg" alt="datascience" style="width:fit-content">
                         <div class="container">
-                            <h2 class="group_name">Data Science Group</h2>
+                            <h3 class="group_name">Data Science Group</h3>
                             <p class="group_description">All about data</p>
                             <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
                             <p><button class="button">Join Group</button></p>
@@ -55,9 +96,9 @@
                 <!--Forth group-->
                 <div class="column">
                     <div class="card">
-                        <img src="../project-mcm2304/img/math-group.jpg" alt="math" style="width:fit-content">
+                        <img src="img/math-group.jpg" alt="math" style="width:fit-content">
                         <div class="container">
-                            <h2 class="group_name">Math Group</h2>
+                            <h3 class="group_name">Math Group</h3>
                             <p class="group_description">All about math</p>
                             <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
                             <p><button class="button">Join Group</button></p>
@@ -68,9 +109,9 @@
                 <!--Fifth group-->
                 <div class="column">
                     <div class="card">
-                        <img src="../project-mcm2304/img/homework-group.jpg" alt="homework" style="width:fit-content">
+                        <img src="img/homework-group.jpg" alt="homework" style="width:fit-content">
                         <div class="container">
-                            <h2 class="group_name">Homework Help Group</h2>
+                            <h3 class="group_name">Homework Help Group</h3>
                             <p class="group_description">We will help with any homework you needs</p>
                             <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
                             <p><button class="button">Join Group</button></p>
@@ -79,8 +120,23 @@
                 </div>
             </div>
         </main>
+
+        <footer>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/UWiSchool" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/uw_ischool" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/school/uw-ischool/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/info340-au22/project-mcm2304" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a class="link-1" href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </p>
+                <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan</p>
+            </div>
+        </footer>
     </body>
-    <footer>
-        <p> &copy; 2022 Minh Mai and Luong Quan</p>
-    </footer>
 </html>
