@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 
 :root {
@@ -12,19 +11,25 @@ body {
 }
 
 h1 {
-    font-size: 2.2em;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
     font-weight: 400;
     padding: 0.5em 0;
     margin: 0;
 }
 
-h1, h2, .weekday-slot {
+h2, .weekday-slot {
     text-align: center;
 }
 
 .logo {
     height: 2em;
-    padding: 0 1em 0 .5em;
+    /* padding: 0 1em 0 .5em; */
 }
 
 .navbar {
@@ -41,7 +46,7 @@ h1, h2, .weekday-slot {
     margin-right: auto;
 }
 
-/* Schedule Layout */
+/* My Schedule */
 .time-slot {
     grid-column: times;
 }
@@ -138,6 +143,88 @@ h1, h2, .weekday-slot {
     color: #000;
     box-shadow: none;
 }
+
+/* My Profile */
+
+.my-profile h2 {
+    text-align: center;
+}
+
+.my-profile .btn {
+    margin: 8px auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* My Group */
+
+h2.group {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.group_description {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.card {
+    position:relative;
+    border: 3px solid #dbe4ed;
+}
+
+.my-group-img {
+    display: block;
+    margin: auto;
+    width:100px;
+    height:100px;
+}
+
+main > div div div div p {
+    padding: 0.5rem 1rem;
+}
+
+main > div div div img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Footer */
   
 footer {
     background-color: #292c2f;
@@ -167,7 +254,7 @@ p.footer-copyright
     margin: 0 auto 20px;
 }
 
-/* Footer links */
+/* Footer Links */
 
 p.footer-links {
     font-size: 14px;
@@ -215,18 +302,22 @@ p.footer-links a {
 /* Media Queries */
 
 @media (min-width: 700px) {
-    main {
+
+    main.my-schedule {
         margin-bottom: 2em;
         padding-top: 1em;
         border: #ccc 1px solid;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
-    h2 {
+
+    .my-schedule h2 {
         text-align: left;
     }
+
     .course-date {
         display: none;
     }
+
     .time-0930,
     .time-1130,
     .time-1200,
@@ -234,6 +325,7 @@ p.footer-links a {
     .time-1330 {
         display: block;
     }
+
     .schedule {
       display: grid;
       grid-gap: 1em;
@@ -261,22 +353,16 @@ p.footer-links a {
         [thursday-end friday-start] 1fr
         [friday-end];
     }
-}
 
-@supports(display: grid) {
-    @media (min-width:700px) {
-        .weekday-slot {
-            display: block;
-            padding: 10px 5px 5px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(255,255,255,.9);
-        }
+    .my-profile form {
+        margin: auto 10em;
     }
-}
 
-@media (min-width: 700px) {
+
+    .my-profile .btn:hover {
+        background-color: #4580a0;
+    }
+
     .footer-left {
         text-align: left;
     }
@@ -301,83 +387,15 @@ p.footer-links a {
     }
 }
 
-/*My Profile*/
-h2.profile {
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button[type=save], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button[type=save]:hover {
-    background-color: #4580a0;
-}
-
-div.my_profile_box_container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-/*My Group*/
-h2.group {
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-main.my_group_main {
-    padding: 100px 0px;
-    height: 100%;
-}
-
-.my_group_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-.my_group_container::after, .my_group_card::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-main > div div div div p {
-    padding: 0.5rem 1rem;
-}
-
-main > div div div img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+@supports(display: grid) {
+    @media (min-width:700px) {
+        .weekday-slot {
+            display: block;
+            padding: 10px 5px 5px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255,255,255,.9);
+        }
+    }
 }
