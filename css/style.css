@@ -8,11 +8,10 @@
 
 body {
     font-family: Nunito, Arial, Helvetica, sans-serif;
+    padding-bottom: 8vh;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 1.5em;
     margin: 0;
 }
 
@@ -27,32 +26,96 @@ h2, .weekday-slot {
     text-align: center;
 }
 
+/* Main Navigation */
+
+.main-nav {
+    margin-top: 7vh;
+}
+
+.main-nav div.container-fluid {
+    justify-content: flex-start;
+    
+}
+
 .logo {
     height: 2em;
-    /* padding: 0 1em 0 .5em; */
+    padding: 0;
+}
+
+a.navbar-brand {
+    margin-right: .5em;
 }
 
 .navbar {
-    background: rgb(106,255,208);
+    background: rgb(106, 255, 208);
     background: linear-gradient(
         90deg, 
-        rgba(106,255,208,1) 0%, 
-        rgba(86,193,227,1) 50%, 
-        rgba(106,148,230,1) 100%
-    );
+        rgba(106, 255, 208, 1) 0%, 
+        rgba(86, 227, 222, 1) 50%, 
+        rgba(106, 189, 210, 1) 100%);
 }
 
 .navbar-collapse a {
     margin-right: auto;
 }
 
+/* Mobile Top Navigation */
+
+.mobile-top-nav h2 {
+    font-size: larger;
+}
+
+.mobile-top-nav div.container-fluid {
+    justify-content: space-between;
+}
+
+.mobile-top-nav .icon i {
+    color: black;
+}
+
+/* Mobile Bottom (Tap Bar) Navigation */
+
+.mobile-bottom-nav {
+    font-size: small;
+    background-color: #fafafa;
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: solid #c8c8c8 1px;
+}
+
+.mobile-top-nav .icon,
+.mobile-bottom-nav .icon {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mobile-bottom-nav a {
+    flex-direction: column;
+}
+
+.mobile-bottom-nav span {
+    margin-top: .15em;
+}
+
+.mobile-bottom-nav .icon-active {
+    color: #04716d;
+    
+}
+
 /* My Schedule */
+
 .time-slot {
     grid-column: times;
 }
 
 .weekday-slot {
-    /* hidden on small screens */
     display: none; 
 }
 
@@ -156,7 +219,7 @@ h2, .weekday-slot {
     border-radius: 4px;
 }
 
-/* My Group */
+/* My Groups */
 
 h2.group {
     text-align: center;
@@ -232,6 +295,7 @@ footer {
     box-sizing: border-box;
     width: 100%;
     padding: 45px 50px;
+    display: none;
 }
 
 .footer-left p {
@@ -240,8 +304,7 @@ footer {
     margin: 0;
 }
 
-p.footer-copyright
- {
+.footer-copyright {
     font-size: 12px;
 }
 
@@ -303,15 +366,34 @@ p.footer-links a {
 
 @media (min-width: 700px) {
 
-    main.my-schedule {
+    body {
+        padding-bottom: 0;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.5em;       
+    }
+
+    .main-nav {
+        margin: 0;
+        height: auto;
+    }
+
+    .main-nav .navbar-brand {
+        margin-right: 16px;
+    }
+
+    .mobile-top-nav,
+    .mobile-bottom-nav {
+        display: none;
+    }
+
+    .my-schedule {
         margin-bottom: 2em;
         padding-top: 1em;
         border: #ccc 1px solid;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-
-    .my-schedule h2 {
-        text-align: left;
     }
 
     .course-date {
@@ -363,6 +445,10 @@ p.footer-links a {
         background-color: #4580a0;
     }
 
+    footer {
+        display: block;
+    }
+
     .footer-left {
         text-align: left;
     }
@@ -371,13 +457,16 @@ p.footer-links a {
         margin-top: 10px;
         max-width: 180px;
     }
-    p.footer-copyright
-     {
+
+    .footer-copyright {
         font-size: 14px;
     }
-    p.footer-links {
+
+    .footer-links {
         font-size: 18px;
     }
+
+    .main-nav .nav-item:hover,
     .footer-right a:hover {
         transform: scale(1.1);
     }
@@ -395,7 +484,7 @@ p.footer-links a {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: rgba(255,255,255,.9);
+            background-color: rgba(255, 255, 255, .9);
         }
     }
 }
