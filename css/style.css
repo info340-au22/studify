@@ -2,24 +2,21 @@
     box-sizing: border-box;
 }
 
-:root {
-    --weekday-bg-color: #fff;
-}
+/* :root {
+    
+} */
 
 body {
-    font-family: Nunito, Arial, Helvetica, sans-serif;
-    padding-bottom: 8vh;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
 h2 {
     font-size: 2em;
-    font-weight: 400;
     padding: 0.5em 0;
-    margin: 0;
 }
 
 h2, .weekday-slot {
@@ -27,24 +24,6 @@ h2, .weekday-slot {
 }
 
 /* Main Navigation */
-
-.main-nav {
-    margin-top: 7vh;
-}
-
-.main-nav div.container-fluid {
-    justify-content: flex-start;
-    
-}
-
-.logo {
-    height: 2em;
-    padding: 0;
-}
-
-a.navbar-brand {
-    margin-right: .5em;
-}
 
 .navbar {
     background: rgb(106, 255, 208);
@@ -55,58 +34,17 @@ a.navbar-brand {
         rgba(106, 189, 210, 1) 100%);
 }
 
-.navbar-collapse a {
-    margin-right: auto;
+.main-nav div.container-fluid {
+    width: 90%;
 }
 
-/* Mobile Top Navigation */
-
-.mobile-top-nav h2 {
-    font-size: larger;
+.main-nav .navbar-nav li {
+    margin-left: 10px;
 }
 
-.mobile-top-nav div.container-fluid {
-    justify-content: space-between;
-}
-
-.mobile-top-nav .icon i {
-    color: black;
-}
-
-/* Mobile Bottom (Tap Bar) Navigation */
-
-.mobile-bottom-nav {
-    font-size: small;
-    background-color: #fafafa;
-    position: fixed;
-    bottom: 0;
-    height: 8vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    border: solid #c8c8c8 1px;
-}
-
-.mobile-top-nav .icon,
-.mobile-bottom-nav .icon {
-    color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.mobile-bottom-nav a {
-    flex-direction: column;
-}
-
-.mobile-bottom-nav span {
-    margin-top: .15em;
-}
-
-.mobile-bottom-nav .icon-active {
-    color: #04716d;
-    
+.logo {
+    height: 2em;
+    padding: 0;
 }
 
 /* My Schedule */
@@ -125,8 +63,8 @@ a.navbar-brand {
     border-radius: 2px;
     font-size: 14px;
     box-shadow:
-        rgba(255,255,255,.6) 1px 1px 0,
-        rgba(0,0,0,.3) 4px 4px 0;
+        rgba(255, 255, 255, .6) 1px 1px 0,
+        rgba(0, 0, 0, .3) 4px 4px 0;
 }
 
 .course-title,
@@ -152,7 +90,7 @@ a.navbar-brand {
 }
 
 .course-title a:focus {
-    outline: 2px dotted rgba(255,255,255,.8);
+    outline: 2px dotted rgba(255, 255, 255, .8);
 }
 
 
@@ -167,7 +105,7 @@ a.navbar-brand {
 .wednesday,
 .thursday,
 .friday {
-    color: var(--weekday-bg-color);
+    color: #fff;
 }
 
 .monday {
@@ -209,23 +147,12 @@ a.navbar-brand {
 
 /* My Profile */
 
-.my-profile h2 {
-    text-align: center;
-}
-
 .my-profile .btn {
     margin: 8px auto;
     display: block;
-    border-radius: 4px;
 }
 
 /* My Groups */
-
-h2.group {
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
 
 .column {
     float: left;
@@ -245,7 +172,7 @@ h2.group {
 }
 
 .group_description {
-    color: grey;
+    color: gray;
 }
 
 .button {
@@ -292,10 +219,8 @@ main > div div div img {
 footer {
     background-color: #292c2f;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
     width: 100%;
-    padding: 45px 50px;
-    display: none;
+    padding: 30px 50px;
 }
 
 .footer-left p {
@@ -304,7 +229,7 @@ footer {
     margin: 0;
 }
 
-.footer-copyright {
+p.footer-copyright {
     font-size: 12px;
 }
 
@@ -340,8 +265,8 @@ p.footer-links a {
     font-size: 20px;
     display: inline-block;
     left: 0;
-    color: #fff;
-    padding-right: 5px;
+    color: #ffffff;
+    padding: 0 5px 0 3px;
 }
 
 .footer-links .link-1:before {
@@ -364,7 +289,7 @@ p.footer-links a {
 
 /* Media Queries */
 
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
 
     body {
         padding-bottom: 0;
@@ -373,20 +298,6 @@ p.footer-links a {
     h1 {
         font-weight: bold;
         font-size: 1.5em;       
-    }
-
-    .main-nav {
-        margin: 0;
-        height: auto;
-    }
-
-    .main-nav .navbar-brand {
-        margin-right: 16px;
-    }
-
-    .mobile-top-nav,
-    .mobile-bottom-nav {
-        display: none;
     }
 
     .my-schedule {
@@ -433,37 +344,27 @@ p.footer-links a {
         [tuesday-end wednesday-start] 1fr
         [wednesday-end thursday-start] 1fr
         [thursday-end friday-start] 1fr
-        [friday-end];
+        [friday-end saturday-start] 1fr
+        [saturday-end sunday-start] 1fr
+        [sunday-end];
     }
 
     .my-profile form {
         margin: auto 10em;
     }
 
-
     .my-profile .btn:hover {
         background-color: #4580a0;
-    }
-
-    footer {
-        display: block;
     }
 
     .footer-left {
         text-align: left;
     }
+    
     .footer-right {
         float: right;
         margin-top: 10px;
         max-width: 180px;
-    }
-
-    .footer-copyright {
-        font-size: 14px;
-    }
-
-    .footer-links {
-        font-size: 18px;
     }
 
     .main-nav .nav-item:hover,
@@ -477,7 +378,7 @@ p.footer-links a {
 }
 
 @supports(display: grid) {
-    @media (min-width:700px) {
+    @media (min-width: 1024px) {
         .weekday-slot {
             display: block;
             padding: 10px 5px 5px;
