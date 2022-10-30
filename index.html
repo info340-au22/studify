@@ -14,7 +14,6 @@
     </head>
     <body>
         <header>
-            
 
                 <nav class="main-nav navbar sticky-top navbar-expand-lg">
                     <div class="container-fluid">                
@@ -62,164 +61,104 @@
         </header>
 
         <main class="container my-schedule">
-            <div class="schedule" aria-labelledby="schedule-heading">
-            
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: monday; grid-row: weekdays;">Monday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: tuesday; grid-row: weekdays;">Tuesday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: wednesday; grid-row: weekdays;">Wednesday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: thursday; grid-row: weekdays;">Thursday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: friday; grid-row: weekdays;">Friday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: saturday; grid-row: weekdays;">Saturday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: sunday; grid-row: weekdays;">Sunday</span>
-                
-                
-                <h3 class="time-slot time-0800" style="grid-row: time-0800;">8:00am</h3>
 
-                <div class="course monday" style="grid-column: monday; grid-row: time-0800 / time-0930;">
-                    <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                    <span class="course-date">Monday</span>
-                    <span class="course-time">8:00 - 9:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+            <section class="my-schedule-grid">
+                <!-- Weekday Columns -->
+                <div class="weekday mon">Monday</div>
+                <div class="weekday tue">Tuesday</div>
+                <div class="weekday wed">Wednesday</div>
+                <div class="weekday thu">Thursday</div>
+                <div class="weekday fri">Friday</div>
+                <div class="weekday sat">Saturday</div>
+                <div class="weekday sun">Sunday</div>
+
+                <!-- Time Rows -->
+                <div class="time time-0800">8:00am</div>
+                <div class="time time-0830">8:30am</div>
+                <div class="time time-0900">9:00am</div>
+                <div class="time time-0930">9:30am</div>
+                <div class="time time-1000">10:00am</div>
+                <div class="time time-1030">10:30am</div>
+                <div class="time time-1100">11:00am</div>
+                <div class="time time-1130">11:30am</div>
+                <div class="time time-1200">12:00pm</div>
+                <div class="time time-1230">12:30pm</div>
+                <div class="time time-1300">1:00pm</div>
+                <div class="time time-1330">1:30pm</div>
+                <div class="time time-1400">2:00pm</div>
+                <div class="time time-1430">2:30pm</div>
+                <div class="time time-1500">3:00pm</div>
+                <div class="time time-1530">3:30pm</div>
+
+                <!-- Event Sections -->
+                <div class="event info340 info340A">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <div class="course wednesday" style="grid-column: wednesday; grid-row: time-0800 / time-0930;">
-                    <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                    <span class="course-date">Wednesday</span>
-                    <span class="course-time">8:00 - 9:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info340 info340B">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <h3 class="time-slot time-0830" style="grid-row: time-0830;">8:30am</h3>
-
-                <div class="course thursday" style="grid-column: thursday / friday; grid-row: time-0830 / time-1000;">
-                    <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">8:30 - 10:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="info-340">
-                        <label>INFO 340</label><br>
-                        <input type="checkbox" value="info-350">
-                        <label>INFO 350</label><br>
-                        <input type="checkbox" value="info-370">
-                        <label>INFO 370</label>
+                <div class="event info370 info370A">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <h3 class="time-slot time-0900" style="grid-row: time-0900;">9:00am</h3>
-
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-0900 / time-1000;">
-                    <h3 class="course-title"><a href="#">INFO 370 BA</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">9:00 - 10:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Lab</label>
+                <div class="event info370 info370B">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-
-                <h3 class="time-slot time-0930" style="grid-row: time-0930;">9:30am</h3>
-                
-                <h3 class="time-slot time-1000" style="grid-row: time-1000;">10:00am</h3>
-                
-                <div class="course weekday-all" style="grid-column: monday / sunday; grid-row: time-1000 / time-1030;">
-                    <h3 class="course-title">Take a break!</h3>
-                </div>
-                
-                <h3 class="time-slot time-1030" style="grid-row: time-1030;">10:30am</h3>
-                
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1030 / time-1200;">
-                    <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">10:30 - 12:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info310 info310A">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <div class="course thursday" style="grid-column: thursday; grid-row: time-1030 / time-1200;">
-                    <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                    <span class="course-date">Thursday</span>
-                    <span class="course-time">10:30 - 12:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info310 info310B">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-
-                <div class="course friday" style="grid-column: friday; grid-row: time-1030 / time-1330;">
-                    <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                    <span class="course-date">Friday</span>
-                    <span class="course-time">10:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="info-340">
-                        <label>INFO 340</label><br>
-                        <input type="checkbox" value="info-350">
-                        <label>INFO 350</label><br>
-                        <input type="checkbox" value="info-370">
-                        <label>INFO 370</label>
-                    </span>
+                <div class="event studyA">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-                
-                <h3 class="time-slot time-1100" style="grid-row: time-1100;">11:00am</h3>
-
-                <div class="course monday" style="grid-column: monday; grid-row: time-1100 / time-1230;">
-                    <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                    <span class="course-date">Monday</span>
-                    <span class="course-time">11:00 - 12:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Reading</label>
-                    </span>
+                <div class="event studyB">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-
-                <div class="course wednesday" style="grid-column: wednesday; grid-row: time-1100 / time-1230;">
-                    <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                    <span class="course-date">Wednesday</span>
-                    <span class="course-time">11:00 - 12:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Reading</label>
-                    </span>
+                <div class="event studyC">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-
-                <h3 class="time-slot time-1130" style="grid-row: time-1130;">11:30am</h3>
-
-                <h3 class="time-slot time-1200" style="grid-row: time-1200;">12:00pm</h3>
-
-                <h3 class="time-slot time-1230" style="grid-row: time-1230;">12:30pm</h3>
-
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1230 / time-1330;">
-                    <h3 class="course-title"><a href="#">INFO 350 AC</a></h3>
-                    <span class="course-date">Friday</span>
-                    <span class="course-time">12:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Lab</label>
-                    </span>
+                <div class="event work">
+                    <span class="event-title">Work</span><br>
                 </div>
-
-                <div class="course thursday" style="grid-column: thursday; grid-row: time-1230 / time-1330;">
-                    <h3 class="course-title"><a href="#">INFO 340 AB</a></h3>
-                    <span class="course-date">Thursday</span>
-                    <span class="course-time">12:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Project</label>
-                    </span>
+                <div class="event tennis">
+                    <span class="event-title">Tennis</span><br>
                 </div>
+                <div class="event game">
+                    <span class="event-title">Game</span><br>
+                </div>
+                <div class="event movie">
+                    <span class="event-title">Movie</span><br>
+                </div>
+                <div class="event mass">
+                    <span class="event-title">Sunday Mass</span><br>
+                </div>
+            </section>
 
-                <h3 class="time-slot time-1300" style="grid-row: time-1300;">1:00pm</h3>
-
-                <h3 class="time-slot time-1330" style="grid-row: time-1330;">1:30pm</h3>
-            
-            </div>
         </main>
 
         <footer>
