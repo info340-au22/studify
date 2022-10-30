@@ -34,10 +34,6 @@ h2, .weekday-slot {
         rgba(106, 189, 210, 1) 100%);
 }
 
-.main-nav div.container-fluid {
-    width: 90%;
-}
-
 .main-nav .navbar-nav li {
     margin-left: 10px;
 }
@@ -298,6 +294,11 @@ p.footer-links a {
     h1 {
         font-weight: bold;
         font-size: 1.5em;       
+    }
+
+
+    .main-nav div.container-fluid {
+        width: 90%;
     }
 
     .my-schedule {
