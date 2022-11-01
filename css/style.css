@@ -56,6 +56,7 @@ main.container.my-schedule {
     padding: .5em;
     margin-bottom: 3em;
     font-size: 14px;
+    border: #ccc 1px solid;
     box-shadow:
         rgba(255, 255, 255, .6) 1px 1px 0,
         rgba(0, 0, 0, .3) 4px 4px 0;
@@ -66,6 +67,7 @@ span.event-title {
     margin-bottom: -1em;
     text-align: center;
     font-weight: bold;
+    border-bottom: 1px solid #ccc;
 }
 
 .weekday,
@@ -203,7 +205,6 @@ span.event-title {
 .studyC {
     grid-area: studyC;
 }
-
 
 .work {
     grid-area: work;
@@ -441,7 +442,7 @@ p.footer-links a {
 
     .my-schedule-grid {
         display: grid;
-        row-gap: .5em;
+        gap: .5em .8em;
         grid-template-areas: 
             ".........   mon      tue      wed      thu      fri      sat      sun   "
             "time-0800 ........ ........ ........ ........ ........ ........ ........"
@@ -476,6 +477,10 @@ p.footer-links a {
 
     .my-profile form {
         margin: auto 10em;
+    }
+
+    footer {
+        padding: 40px 100px;
     }
 
     .footer-left {
