@@ -1,224 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
     <head>
         <meta charset="utf-8">
-        <title>Studify</title>
-        <meta name="description" content="Stutify Study Schedule">
+        <title>Studify - My Schedule</title>
+        <meta name="description" content="Studify My Schedule">
         <meta name="author" content="Minh Mai, Luong Quan">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            
-            <nav class="navbar sticky-top navbar-expand-lg bg-light">
-                <div class="container-fluid">                
-                    <a class="navbar-brand" href="#"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">My Schedule</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Groups</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Profile</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    About
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Mission</a></li>
-                                    <li><a class="dropdown-item" href="#">Creators</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Contact</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+
+                <nav class="main-nav navbar sticky-top navbar-expand-lg">
+                    <div class="container-fluid">                
+                        <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
+                        <span class="navbar-brand mb-0 h1"><h1 class="title">Studify</h1></span>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">My Schedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">My Groups</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">My Profile</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Mission</a></li>
+                                        <li><a class="dropdown-item" href="#">Creators</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+
+                                    <button class="btn btn-secondary sign-out" type="button">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span> Sign Out</span>
+                                    </button>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-            <h1>Studify</h1>
+                </nav>
+
+            <h2>My Personal Schedule</h2>
+
         </header>
 
-        <main class="container">
-            <h2 id="schedule-heading">Your Personal Schedule</h2>
-            <div class="schedule" aria-labelledby="schedule-heading">
-            
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: monday; grid-row: weekdays;">Monday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: tuesday; grid-row: weekdays;">Tuesday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: wednesday; grid-row: weekdays;">Wednesday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: thursday; grid-row: weekdays;">Thursday</span>
-                <span class="weekday-slot" aria-hidden="true" style="grid-column: friday; grid-row: weekdays;">Friday</span>
-                
-                
-                <h3 class="time-slot time-0800" style="grid-row: time-0800;">8:00am</h3>
+        <main class="container my-schedule">
 
-                <div class="course monday" style="grid-column: monday; grid-row: time-0800 / time-0930;">
-                    <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                    <span class="course-date">Monday</span>
-                    <span class="course-time">8:00 - 9:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+            <section class="my-schedule-grid">
+                <!-- Weekday Columns -->
+                <div class="weekday mon">Monday</div>
+                <div class="weekday tue">Tuesday</div>
+                <div class="weekday wed">Wednesday</div>
+                <div class="weekday thu">Thursday</div>
+                <div class="weekday fri">Friday</div>
+                <div class="weekday sat">Saturday</div>
+                <div class="weekday sun">Sunday</div>
+
+                <!-- Time Rows -->
+                <div class="time time-0800">8:00am</div>
+                <div class="time time-0830">8:30am</div>
+                <div class="division"></div>
+                <div class="time time-0900">9:00am</div>
+                <div class="time time-0930">9:30am</div>
+                <div class="time time-1000">10:00am</div>
+                <div class="time time-1030">10:30am</div>
+                <div class="time time-1100">11:00am</div>
+                <div class="time time-1130">11:30am</div>
+                <div class="time time-1200">12:00pm</div>
+                <div class="time time-1230">12:30pm</div>
+                <div class="time time-1300">1:00pm</div>
+                <div class="time time-1330">1:30pm</div>
+                <div class="time time-1400">2:00pm</div>
+                <div class="time time-1430">2:30pm</div>
+                <div class="time time-1500">3:00pm</div>
+                <div class="time time-1530">3:30pm</div>
+
+                <!-- Event Sections -->
+                <div class="event info340 info340A">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <div class="course wednesday" style="grid-column: wednesday; grid-row: time-0800 / time-0930;">
-                    <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                    <span class="course-date">Wednesday</span>
-                    <span class="course-time">8:00 - 9:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info340 info340B">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <h3 class="time-slot time-0830" style="grid-row: time-0830;">8:30am</h3>
-
-                <div class="course thursday" style="grid-column: thursday /friday; grid-row: time-0830 / time-1000;">
-                    <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">8:30 - 10:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="info-340">
-                        <label>INFO 340</label><br>
-                        <input type="checkbox" value="info-350">
-                        <label>INFO 350</label><br>
-                        <input type="checkbox" value="info-370">
-                        <label>INFO 370</label>
+                <div class="event info370 info370A">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <h3 class="time-slot time-0900" style="grid-row: time-0900;">9:00am</h3>
-
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-0900 / time-1000;">
-                    <h3 class="course-title"><a href="#">INFO 370 BA</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">9:00 - 10:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Lab</label>
+                <div class="event info370 info370B">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-
-                <h3 class="time-slot time-0930" style="grid-row: time-0930;">9:30am</h3>
-                
-                <h3 class="time-slot time-1000" style="grid-row: time-1000;">10:00am</h3>
-                
-                <div class="course weekday-all" style="grid-column: monday-start / friday-end; grid-row: time-1000 / time-1030;">
-                    <h3 class="course-title">Take a break!</h3>
-                </div>
-                
-                <h3 class="time-slot time-1030" style="grid-row: time-1030;">10:30am</h3>
-                
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1030 / time-1200;">
-                    <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                    <span class="course-date">Tuesday</span>
-                    <span class="course-time">10:30 - 12:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info310 info310A">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-                
-                <div class="course thursday" style="grid-column: thursday; grid-row: time-1030 / time-1200;">
-                    <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                    <span class="course-date">Thursday</span>
-                    <span class="course-time">10:30 - 12:00</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Problem Set</label>
+                <div class="event info310 info310B">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
                     </span>
                 </div>
-
-                <div class="course friday" style="grid-column: friday; grid-row: time-1030 / time-1330;">
-                    <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                    <span class="course-date">Friday</span>
-                    <span class="course-time">10:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="info-340">
-                        <label>INFO 340</label><br>
-                        <input type="checkbox" value="info-350">
-                        <label>INFO 350</label><br>
-                        <input type="checkbox" value="info-370">
-                        <label>INFO 370</label>
-                    </span>
+                <div class="event studyA">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-                
-                <h3 class="time-slot time-1100" style="grid-row: time-1100;">11:00am</h3>
-
-                <div class="course monday" style="grid-column: monday; grid-row: time-1100 / time-1230;">
-                    <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                    <span class="course-date">Monday</span>
-                    <span class="course-time">11:00 - 12:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Reading</label>
-                    </span>
+                <div class="event studyB">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-
-                <div class="course wednesday" style="grid-column: wednesday; grid-row: time-1100 / time-1230;">
-                    <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                    <span class="course-date">Wednesday</span>
-                    <span class="course-time">11:00 - 12:30</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Reading</label>
-                    </span>
+                <div class="event studyC">
+                    <span class="event-title">Self Study</span><br>
                 </div>
-
-                <h3 class="time-slot time-1130" style="grid-row: time-1130;">11:30am</h3>
-
-                
-
-                <h3 class="time-slot time-1200" style="grid-row: time-1200;">12:00pm</h3>
-
-                <h3 class="time-slot time-1230" style="grid-row: time-1230;">12:30pm</h3>
-
-                <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1230 / time-1330;">
-                    <h3 class="course-title"><a href="#">INFO 350 AC</a></h3>
-                    <span class="course-date">Friday</span>
-                    <span class="course-time">12:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Lab</label>
-                    </span>
+                <div class="event work">
+                    <span class="event-title">Work</span><br>
                 </div>
-
-                <div class="course thursday" style="grid-column: thursday; grid-row: time-1230 / time-1330;">
-                    <h3 class="course-title"><a href="#">INFO 340 AB</a></h3>
-                    <span class="course-date">Thursday</span>
-                    <span class="course-time">12:30 - 1:30 PM</span>
-                    <span class="course-todolist">
-                        <input type="checkbox" value="homework">
-                        <label>Project</label>
-                    </span>
+                <div class="event tennis">
+                    <span class="event-title">Tennis</span><br>
                 </div>
+                <div class="event game">
+                    <span class="event-title">Game</span><br>
+                </div>
+                <div class="event movie">
+                    <span class="event-title">Movie</span><br>
+                </div>
+                <div class="event mass">
+                    <span class="event-title">Sunday Mass</span><br>
+                </div>
+            </section>
 
-                <h3 class="time-slot time-1300" style="grid-row: time-1300;">1:00pm</h3>
-
-                <h3 class="time-slot time-1330" style="grid-row: time-1330;">1:30pm</h3>
-            
-            </div>
         </main>
 
         <footer>
             <div class="footer-right">
-                <a href="https://www.facebook.com/UWiSchool" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="https://twitter.com/uw_ischool" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/school/uw-ischool/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/info340-au22/project-mcm2304" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/UWiSchool" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/uw_ischool" target="_blank"><i class="fa-brands fa-twitter"></i></i></a>
+                <a href="https://www.linkedin.com/school/uw-ischool/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/info340-au22/project-mcm2304" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
 
             <div class="footer-left">
@@ -233,238 +183,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+
     </body>
-=======
-<head>
-    <meta charset="utf-8">
-    <title>Studify</title>
-    <meta name="description" content="Stutify Study Schedule">
-    <meta name="author" content="Minh Mai, Luong Quan">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-<body>
-    <header>
-        
-        <nav class="navbar sticky-top navbar-expand-lg bg-light">
-            <div class="container-fluid">                
-                <a class="navbar-brand" href="#"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">My Schedule</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Groups</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Profile</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mission</a></li>
-                                <li><a class="dropdown-item" href="#">Creators</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Contact</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <h1>Studify</h1>
-    </header>
 
-    <main class="container">
-        <h2 id="schedule-heading">Your Personal Schedule</h2>
-        <div class="schedule" aria-labelledby="schedule-heading">
-        
-            <span class="weekday-slot" aria-hidden="true" style="grid-column: monday; grid-row: weekdays;">Monday</span>
-            <span class="weekday-slot" aria-hidden="true" style="grid-column: tuesday; grid-row: weekdays;">Tuesday</span>
-            <span class="weekday-slot" aria-hidden="true" style="grid-column: wednesday; grid-row: weekdays;">Wednesday</span>
-            <span class="weekday-slot" aria-hidden="true" style="grid-column: thursday; grid-row: weekdays;">Thursday</span>
-            <span class="weekday-slot" aria-hidden="true" style="grid-column: friday; grid-row: weekdays;">Friday</span>
-            
-            
-            <h3 class="time-slot time-0800" style="grid-row: time-0800;">8:00am</h3>
-
-            <div class="course monday" style="grid-column: monday; grid-row: time-0800 / time-0930;">
-                <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                <span class="course-date">Monday</span>
-                <span class="course-time">8:00 - 9:30</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Problem Set</label>
-                </span>
-            </div>
-            
-            <div class="course wednesday" style="grid-column: wednesday; grid-row: time-0800 / time-0930;">
-                <h3 class="course-title"><a href="#">INFO 370</a></h3>
-                <span class="course-date">Wednesday</span>
-                <span class="course-time">8:00 - 9:30</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Problem Set</label>
-                </span>
-            </div>
-            
-            <h3 class="time-slot time-0830" style="grid-row: time-0830;">8:30am</h3>
-
-            <div class="course thursday" style="grid-column: thursday /friday; grid-row: time-0830 / time-1000;">
-                <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                <span class="course-date">Tuesday</span>
-                <span class="course-time">8:30 - 10:00</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="info-340">
-                    <label>INFO 340</label><br>
-                    <input type="checkbox" value="info-350">
-                    <label>INFO 350</label><br>
-                    <input type="checkbox" value="info-370">
-                    <label>INFO 370</label>
-                </span>
-            </div>
-            
-            <h3 class="time-slot time-0900" style="grid-row: time-0900;">9:00am</h3>
-
-            <div class="course tuesday" style="grid-column: tuesday; grid-row: time-0900 / time-1000;">
-                <h3 class="course-title"><a href="#">INFO 370 BA</a></h3>
-                <span class="course-date">Tuesday</span>
-                <span class="course-time">9:00 - 10:00</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Lab</label>
-                </span>
-            </div>
-
-            <h3 class="time-slot time-0930" style="grid-row: time-0930;">9:30am</h3>
-            
-            <h3 class="time-slot time-1000" style="grid-row: time-1000;">10:00am</h3>
-            
-            <div class="course weekday-all" style="grid-column: monday-start / friday-end; grid-row: time-1000 / time-1030;">
-                <h3 class="course-title">Take a break!</h3>
-            </div>
-            
-            <h3 class="time-slot time-1030" style="grid-row: time-1030;">10:30am</h3>
-            
-            <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1030 / time-1200;">
-                <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                <span class="course-date">Tuesday</span>
-                <span class="course-time">10:30 - 12:00</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Problem Set</label>
-                </span>
-            </div>
-            
-            <div class="course thursday" style="grid-column: thursday; grid-row: time-1030 / time-1200;">
-                <h3 class="course-title"><a href="#">INFO 340</a></h3>
-                <span class="course-date">Thursday</span>
-                <span class="course-time">10:30 - 12:00</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Problem Set</label>
-                </span>
-            </div>
-
-            <div class="course friday" style="grid-column: friday; grid-row: time-1030 / time-1330;">
-                <h3 class="course-title"><a href="#">STUDY TIME!</a></h3>
-                <span class="course-date">Friday</span>
-                <span class="course-time">10:30 - 1:30 PM</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="info-340">
-                    <label>INFO 340</label><br>
-                    <input type="checkbox" value="info-350">
-                    <label>INFO 350</label><br>
-                    <input type="checkbox" value="info-370">
-                    <label>INFO 370</label>
-                </span>
-            </div>
-            
-            <h3 class="time-slot time-1100" style="grid-row: time-1100;">11:00am</h3>
-
-            <div class="course monday" style="grid-column: monday; grid-row: time-1100 / time-1230;">
-                <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                <span class="course-date">Monday</span>
-                <span class="course-time">11:00 - 12:30</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Reading</label>
-                </span>
-            </div>
-
-            <div class="course wednesday" style="grid-column: wednesday; grid-row: time-1100 / time-1230;">
-                <h3 class="course-title"><a href="#">INFO 350</a></h3>
-                <span class="course-date">Wednesday</span>
-                <span class="course-time">11:00 - 12:30</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Reading</label>
-                </span>
-            </div>
-
-            <h3 class="time-slot time-1130" style="grid-row: time-1130;">11:30am</h3>
-
-            
-
-            <h3 class="time-slot time-1200" style="grid-row: time-1200;">12:00pm</h3>
-
-            <h3 class="time-slot time-1230" style="grid-row: time-1230;">12:30pm</h3>
-
-            <div class="course tuesday" style="grid-column: tuesday; grid-row: time-1230 / time-1330;">
-                <h3 class="course-title"><a href="#">INFO 350 AC</a></h3>
-                <span class="course-date">Friday</span>
-                <span class="course-time">12:30 - 1:30 PM</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Lab</label>
-                </span>
-            </div>
-
-            <div class="course thursday" style="grid-column: thursday; grid-row: time-1230 / time-1330;">
-                <h3 class="course-title"><a href="#">INFO 340 AB</a></h3>
-                <span class="course-date">Thursday</span>
-                <span class="course-time">12:30 - 1:30 PM</span>
-                <span class="course-todolist">
-                    <input type="checkbox" value="homework">
-                    <label>Project</label>
-                </span>
-            </div>
-
-            <h3 class="time-slot time-1300" style="grid-row: time-1300;">1:00pm</h3>
-
-            <h3 class="time-slot time-1330" style="grid-row: time-1330;">1:30pm</h3>
-        
-        </div>
-    </main>
-    <footer>
-        <div class="footer-right">
-            <a href="https://www.facebook.com/UWiSchool" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/uw_ischool" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/school/uw-ischool/" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/info340-au22/project-mcm2304" target="_blank"><i class="fa fa-github"></i></a>
-        </div>
-
-        <div class="footer-left">
-            <p class="footer-links">
-                <a class="link-1" href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">FAQ</a>
-            </p>
-            <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-</body>
->>>>>>> refs/remotes/origin/luong
 </html>
