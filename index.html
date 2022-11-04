@@ -8,21 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">    
     </head>
     <body>
         <header>
 
                 <nav class="main-nav navbar sticky-top navbar-expand-lg">
                     <div class="container-fluid">                
-                        <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
-                        <span class="navbar-brand mb-0 h1"><h1 class="title">Studify</h1></span>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
+                        <span class="navbar-brand d-none d-md-block mb-0 h1"><h1 class="title">Studify</h1></span>
+                        <button class="btn btn-secondary sign-out ms-lg-3 order-lg-last" type="button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span class="d-none d-lg-inline"> Sign Out</span>
+                        </button>
+
+                        <div class="collapse me-auto navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">My Schedule</a>
@@ -44,19 +48,13 @@
                                         <li><a class="dropdown-item" href="#">Contact</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-
-                                    <button class="btn btn-secondary sign-out" type="button">
-                                        <i class="fa-solid fa-right-from-bracket"></i>
-                                        <span> Sign Out</span>
-                                    </button>
-                                </li>
                             </ul>
                         </div>
+                        
                     </div>
                 </nav>
 
-            <h2>My Personal Schedule</h2>
+            <h2>My Schedule</h2>
 
         </header>
 
@@ -74,8 +72,7 @@
 
                 <!-- Time Rows -->
                 <div class="time time-0800">8:00am</div>
-                <div class="time time-0830">8:30am</div>
-                <div class="division"></div>
+                <div class="time time-0830">8:30am</div> 
                 <div class="time time-0900">9:00am</div>
                 <div class="time time-0930">9:30am</div>
                 <div class="time time-1000">10:00am</div>
@@ -180,6 +177,7 @@
             </div>
         </footer>
 
+        <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     </body>

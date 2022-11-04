@@ -38,6 +38,10 @@ h2 {
     margin-left: 10px;
 }
 
+.main-nav .nav-item a {
+    color: #33383b;
+}
+
 .logo {
     height: 2em;
     padding: 0;
@@ -251,6 +255,7 @@ span.event-title {
         "time-1530  studyA ";
     grid-template-columns: 1fr 5fr;
     grid-auto-rows: 25px;
+    z-index: 1000;
 }
 
 .my-schedule-grid :is(
@@ -430,13 +435,8 @@ p.footer-links a {
         font-size: 1.5em;       
     }
 
-
     .main-nav div.container-fluid {
         width: 90%;
-    }
-
-    .main-nav .nav-item a {
-        color: #33383b;
     }
 
     .my-schedule {
@@ -479,6 +479,17 @@ p.footer-links a {
         display: block;
     }
 
+    .event:hover {
+        cursor: pointer;
+        transition: 0.1s linear;
+        box-shadow: 
+            rgba(255, 255, 255, .6) 1px 1px 0,
+            rgba(0, 0, 0, .3) 4px 4px 0,
+            rgba(255, 255, 255, 0.5) 0px 0px 999px 999px;
+        z-index: 500;
+        transform: scale(1.01);
+    }
+    
     .my-profile form {
         margin: auto 10em;
     }
@@ -502,6 +513,7 @@ p.footer-links a {
     }
 
     .main-nav .nav-item:hover,
+    .main-nav .sign-out:hover,
     .footer-right a:hover {
         transform: scale(1.1);
     }
