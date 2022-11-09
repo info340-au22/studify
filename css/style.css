@@ -455,6 +455,10 @@ p.footer-links a {
         font-size: 1.5em;       
     }
 
+    h2 {
+        padding: 1em 0;
+    }
+
     .main-nav div.container-fluid {
         width: 90%;
     }
