@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Studify - My Groups</title>
+        <title>Studify - Groups</title>
         <meta name="description" content="Studify My Groups">
         <meta name="author" content="Minh Mai, Luong Quan">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -13,30 +13,34 @@
     </head>
     <body>
         <header>
-
-            <nav class="main-nav navbar sticky-top navbar-expand-lg">
-                <div class="container-fluid">                
+            <!-- Navigation Bar -->
+            <nav class="main-nav navbar sticky-top navbar-expand-md">
+                <div class="container-fluid">          
+                    <!-- Hamburger Menu -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <!-- Logo and Website Name -->
                     <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
                     <span class="navbar-brand d-none d-md-block mb-0 h1"><h1 class="title">Studify</h1></span>
-                    <button class="btn btn-secondary sign-out ms-lg-3 order-lg-last" type="button">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="d-none d-lg-inline"> Sign Out</span>
+                    <!-- Sign Out Button -->
+                    <button class="btn btn-secondary sign-out ms-md-3 order-md-last" type="button">
+                        <span class="fa-solid fa-right-from-bracket"></span>
+                        <span class="d-none d-md-inline"> Sign Out</span>
                     </button>
-
+                    <!-- Collapsible Navigation Bar -->
                     <div class="collapse me-auto navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">My Schedule</a>
+                                <a class="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">My Groups</a>
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">Groups</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">My Profile</a>
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">Profile</a>
                             </li>
+                            <!-- Dropdown Menu -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     About
@@ -49,89 +53,145 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div>
-                    
+                    </div>       
                 </div>
             </nav>
+            <h2>My Groups</h2>
+        </header>
+        <main class="container my-groups">
 
-        <h2>My Groups</h2>
+            <section class="secondary-navbar">
+                <nav class="navbar pb-4">
+                    <div class="container-fluid">
+                        <div class="btn-group flex-grow-1 flex-md-grow-0 pb-3 pb-sm-0">
+                            <a href="#" class="btn active" aria-current="page">My Groups</a>
+                            <a href="#" class="btn inactive">Join Groups</a>
+                          </div>
+                      <form class="search-form d-flex flex-grow-1 flex-md-grow-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search Groups" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <span class="fa-solid fa-magnifying-glass"></span>
+                        </button>
+                      </form>
+                    </div>
+                  </nav>
+            </section>
 
-    </header>
-        <main>
-            <div class="row">
-                <!--First group-->
-                <div class="column">
-                    <div class="card">
-                        <img class="my-group-img" src="img/developing.jpg" alt="developing" style="width:fit-content">
-                        <div class="container">
-                            <h3 class="group_name">Developing Group</h3>
-                            <p class="group_description">Developing and Coding</p>
-                            <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
-                            <p><button class="button">Join Group</button></p>
+            <section class="cards mx-auto row row-cols-2 row-cols-md-4 g-3 g-md-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/XopauR-Nagk" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 340</h3>
+                            <p class="card-text">Client-Side Development</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">101 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/C5pXRFEjq3w" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 310</h3>
+                            <p class="card-text">Information Assurance And Cybersecurity</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">46 members | Public</small>
                         </div>
                     </div>
                 </div>
 
-                <!--Second group-->
-                <div class="column">
-                    <div class="card">
-                        <img class="my-group-img" src="img/art-group.jpg" alt="art" style="width:fit-content">
-                        <div class="container">
-                            <h3 class="group_name">Art Group</h3>
-                            <p class="group_description">All about arts</p>
-                            <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
-                            <p><button class="button">Join Group</button></p>
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/SYTO3xs06fU" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">CS Careers</h3>
+                            <p class="card-text">Interviews, Leetcode, and More</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">187 members | Public</small>
                         </div>
                     </div>
                 </div>
 
-                <!--Third group-->
-                <div class="column">
-                    <div class="card">
-                        <img class="my-group-img" src="img/data-science.jpg" alt="datascience" style="width:fit-content">
-                        <div class="container">
-                            <h3 class="group_name">Data Science Group</h3>
-                            <p class="group_description">All about data</p>
-                            <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
-                            <p><button class="button">Join Group</button></p>
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/JKUTrJ4vK00" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 370</h3>
+                            <p class="card-text">Core Methods in Data Science</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">89 members | Public</small>
                         </div>
                     </div>
                 </div>
 
-                <!--Forth group-->
-                <div class="column">
-                    <div class="card">
-                        <img class="my-group-img" src="img/math-group.jpg" alt="math" style="width:fit-content">
-                        <div class="container">
-                            <h3 class="group_name">Math Group</h3>
-                            <p class="group_description">All about math</p>
-                            <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
-                            <p><button class="button">Join Group</button></p>
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/ViEBSoZH6M4" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">MATH 208</h3>
+                            <p class="card-text">Linear Algebra</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">110 members | Public</small>
                         </div>
                     </div>
                 </div>
 
-                <!--Fifth group-->
-                <div class="column">
-                    <div class="card">
-                        <img class="my-group-img" src="img/homework-group.jpg" alt="homework" style="width:fit-content">
-                        <div class="container">
-                            <h3 class="group_name">Homework Help Group</h3>
-                            <p class="group_description">We will help with any homework you needs</p>
-                            <p>Some text that use to describes this group lorem ipsum ipsum lorem.</p>
-                            <p><button class="button">Join Group</button></p>
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/vL-R502ZxuM" class="card-img-top img-thumbnail mx-auto d-block" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Dumblings</h3>
+                            <p class="card-text">Procrastinating Dumblings</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">23 members | Private</small>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </section>
+
         </main>
 
         <footer>
             <div class="footer-right">
-                <a href="https://www.facebook.com/UWiSchool" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/uw_ischool" target="_blank"><i class="fa-brands fa-twitter"></i></i></a>
-                <a href="https://www.linkedin.com/school/uw-ischool/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/info340-au22/project-mcm2304" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/UWiSchool" target="_blank">
+                    <span class="fa-brands fa-facebook"></span>
+                </a>
+                <a href="https://twitter.com/uw_ischool" target="_blank">
+                    <span class="fa-brands fa-twitter"></span>
+                </a>
+                <a href="https://www.linkedin.com/school/uw-ischool" target="_blank">
+                    <span class="fa-brands fa-linkedin"></span>
+                </a>
+                <a href="https://github.com/info340-au22" target="_blank">
+                    <span class="fa-brands fa-github"></span>
+                </a>
             </div>
 
             <div class="footer-left">
@@ -140,10 +200,10 @@
                     <a href="#">Contact</a>
                     <a href="#">FAQ</a>
                 </p>
-                <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan</p>
+                <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan. Made in &#127783; Seattle.</p>
             </div>
         </footer>
-
+        <!-- JavaScript -->
         <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         
