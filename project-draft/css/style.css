@@ -315,14 +315,8 @@ span.event-title {
 
 /* MY GROUPS */
 
-.my-groups .btn-group .active {
-    background-color: #6abdd2;
-    border-color: #6abdd2;
-}
-
-.my-groups .btn-group .inactive {
-    background-color: #88cadb;
-    border-color: #88cadb;
+.my-groups .secondary-navbar a {
+    color: #33383b;
 }
 
 .my-groups .search-form button {
@@ -344,6 +338,7 @@ span.event-title {
     color: gray;
 }
 
+.my-groups .nav-tabs a,
 .my-groups .card-body,
 .my-groups .card-footer {
     font-size: 14px;
@@ -352,6 +347,7 @@ span.event-title {
 .my-groups .card-title {
     font-size: 18px;
 }
+
 
 /* MY PROFILE */
 
@@ -502,6 +498,7 @@ p.footer-links a {
         height: 100px;
     }
 
+    .my-groups .nav-tabs a,
     .my-groups .card-body,
     .my-groups .card-footer {
         font-size: 16px;
@@ -541,12 +538,14 @@ p.footer-links a {
         transform: scale(1.1);
     }
 
-    .my-groups .inactive:hover {
-        background-color: #6abdd2;
-    }
-
     .my-groups .search-form button:hover {
         background-color: #b5dee9;
+    }
+    
+    .cards-my-groups .card:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .1);
+        transition: linear .3s;
     }
     
     .my-profile .btn:hover {
@@ -556,4 +555,5 @@ p.footer-links a {
     p.footer-links a:hover {
         text-decoration: underline;
     }
+
 }
