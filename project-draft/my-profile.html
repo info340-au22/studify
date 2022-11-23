@@ -53,69 +53,91 @@
                     </div>
                 </div>
             </nav>
-        <h2>My Profile</h2>
+        <h2>Profile</h2>
 
     </header>
 
         <main class="container my-profile">
-            
-            <section class="container" aria-label="my-profile">
 
-                <form method="post" action="/action_page.php">
-            
-                    <!--First Name-->
-                    <div class="mb-3">
-                        <label class="form-label" for="first-name">First name</label>
-                        <input class="form-control form-control-sm" type="text" id="first-name" name="first-name">
-                    </div>
+            <div class="row gutters-sm">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="https://source.unsplash.com/yMSecCHsIBc" alt="Minh Mai Avatar" class="rounded-circle" width="150">
+                                <div class="mt-3">
+                                    <h4>Minh Mai</h4>
+                                        <p class="text-secondary mb-1">Front-End Developer</p>
+                                        <p class="text-muted font-size-sm">Seattle, WA</p>
+                        
+                                    <div class="d-flex justify-content-between">
+                                        <!-- Facebook -->
+                                        <a class="social-media" href="#" role="button" style="color:#3b5998">
+                                            <span class="fa-brands fa-facebook-f fa-lg"></span>
+                                        </a>
+                                        <!-- Twitter -->
+                                        <a class="social-media" href="#" role="button" style="color:#00acee">
+                                            <span class="fa-brands fa-twitter fa-lg"></span>
+                                        </a>
+                                        <!-- Instagram -->
+                                        <a class="social-media" href="#" role="button" style="color:#bc2a8d">
+                                            <span class="fa-brands fa-instagram fa-lg"></span>
+                                        </a>
+                                        <!-- Linked In -->
+                                        <a class="social-media" href="#" role="button" style="color:#0072b1">
+                                            <span class="fa-brands fa-linkedin-in fa-lg"></span>
+                                        </a>
+                                        <!-- GitHub -->
+                                        <a class="social-media" href="#" role="button" style="color:#171515">
+                                            <span class="fa-brands fa-github fa-lg"></span>
+                                        </a>
+                                    </div>
 
-                    <!--Last Name-->
-                    <div class="mb-3">
-                        <label class="form-label" for="last-name">Last name</label>
-                        <input class="form-control form-control-sm" type="text" id="last-name" name="last-name">
-                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label" for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
-                        <input class="form-control form-control-sm" type="date" name="birth-date" id="birth-date" />
-                      </div>
-
-                    <!--Email-->
-                    <div class="mb-3">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-control form-control-sm" type="text" id="email" name="email">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4 text-start">Name</div>
+                                <div class="col-sm-8 text-secondary text-md-end">Minh Mai</div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">Username</div>
+                                <div class="col-sm-8 text-secondary text-md-end">minhm23</div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">Email</div>
+                                <div class="col-sm-8 text-secondary text-md-end">mcm2304@uw.edu</div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">Phone</h6></div>
+                                <div class="col-sm-8 text-secondary text-md-end">(206) 495-7480</div>
+                            </div>                         
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">School</div>
+                                <div class="col-sm-8 text-secondary text-md-end">University of Washington</div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <a class="btn btn-info" target="__blank" href="#">Edit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!--School/University-->
-                    <div class="mb-3">
-                        <label class="form-label" for="school">School/University</label>
-                        <input class="form-control form-control-sm" type="text" id="school" name="school">
-                    </div>
-                    
-                    <!--Major-->
-                    <div class="mb-3">
-                        <label class="form-label" for="major">Major</label>
-                        <input class="form-control form-control-sm" type="text" id="major" name="major">
-                    </div>
-                    
-                    <!--Interest Course-->
-                    <div class="mb-3">
-                        <label class="form-label" for="interest">Interest Courses</label>
-                        <input class="form-control form-control-sm" type="text" id="interest" name="interest">
-                    </div>
-                    
-                    <!--About You-->
-                    <div class="mb-3">
-                        <label class="form-label" for="about-you">About You</label>
-                        <textarea class="form-control form-control-sm" type="text" id="about-you" name="about-you" placeholder="Input your bio here..."></textarea>
-                    </div>
-
-                    <!--Save Button-->
-                    <div class="mb-3 btn">
-                        <button class="btn btn-primary" type="submit" value="save">Save Profile</button>
-                    </div>
-                </form>
-            </section>
+                </div>
+            </div>
+                  
         </main>
 
         <footer>

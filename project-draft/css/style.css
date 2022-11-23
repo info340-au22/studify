@@ -351,11 +351,6 @@ span.event-title {
 
 /* MY PROFILE */
 
-.my-profile .btn {
-    margin: 8px auto;
-    display: block;
-}
-
 /* FOOTER */
   
 footer {
@@ -534,6 +529,7 @@ p.footer-links a {
     .main-nav .nav-item:hover,
     .main-nav .sign-out:hover,
     .my-groups .btn-link:hover,
+    .my-profile .social-media:hover,
     .footer-right a:hover {
         transform: scale(1.1);
     }
@@ -547,13 +543,10 @@ p.footer-links a {
         background-color: rgba(0, 0, 0, .1);
         transition: linear .3s;
     }
-    
-    .my-profile .btn:hover {
-        background-color: #4580a0;
-    }
 
     p.footer-links a:hover {
         text-decoration: underline;
     }
 
 }
+
