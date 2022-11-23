@@ -67,12 +67,12 @@ h2 {
 .event {
     background-color: cornsilk;
     padding: .5em;
-    margin-bottom: 3em;
     font-size: 14px;
     border: #ccc 1px solid;
     box-shadow:
         rgba(255, 255, 255, .6) 1px 1px 0,
         rgba(0, 0, 0, .3) 4px 4px 0;
+    overflow: hidden;
 }
 
 span.event-title {
@@ -108,194 +108,49 @@ span.event-title {
     padding: 1px 6px;
 }
 
-/* Declare Grid Areas */
-
-.edit-button {
-    grid-area: edit;
-}
-
-.mon {
-    grid-area: mon;
-}
-
-.tue {
-    grid-area: tue;
-}
-
-.wed {
-    grid-area: wed;
-}
-
-.thu {
-    grid-area: thu;
-}
-
-.fri {
-    grid-area: fri;
-}
-
-.sat {
-    grid-area: sat;
-}
-
-.sun {
-    grid-area: sun;
-}
-
-.time-0800 {
-    grid-area: time-0800;
-}
-
-.time-0830 {
-    grid-area: time-0830;
-}
-
-.time-0900 {
-    grid-area: time-0900;
-}
-
-.time-0930 {
-    grid-area: time-0930;
-}
-
-.time-1000 {
-    grid-area: time-1000;
-}
-
-.time-1030 {
-    grid-area: time-1030;
-}
-
-.time-1100 {
-    grid-area: time-1100;
-}
-
-.time-1130 {
-    grid-area: time-1130;
-}
-
-.time-1200 {
-    grid-area: time-1200;
-}
-
-.time-1230 {
-    grid-area: time-1230;
-}
-
-.time-1300 {
-    grid-area: time-1300;
-}
-
-.time-1330 {
-    grid-area: time-1330;
-}
-
-.time-1400 {
-    grid-area: time-1400;
-}
-
-.time-1430 {
-    grid-area: time-1430;
-}
-
-.time-1500 {
-    grid-area: time-1500;
-}
-
-.time-1530 {
-    grid-area: time-1530;
-}
-
-.info340A {
-    grid-area: info340A;
-}
-
-.info340B {
-    grid-area: info340B;
-}
-
-.info310A {
-    grid-area: info310A;
-}
-
-.info310B {
-    grid-area: info310B;
-}
-
-.info370A {
-    grid-area: info370A;
-}
-
-.info370B {
-    grid-area: info370B;
-}
-
-.studyA {
-    grid-area: studyA;
-}
-
-.studyB {
-    grid-area: studyB;
-}
-
-.studyC {
-    grid-area: studyC;
-}
-
-.work {
-    grid-area: work;
-}
-
-.tennis {
-    grid-area: tennis;
-}
-
-.game {
-    grid-area: game;
-}
-
-.movie {
-    grid-area: movie;
-}
-
-.mass {
-    grid-area: mass;
-}
-
 /* My Schedule Grid */
 
 .my-schedule-grid {
     display: grid;
     gap: .5em;
-    grid-template-areas: 
-        "  edit      mon   "
-        "time-0800 ........"
-        "time-0830 ........"
-        "time-0900 ........"
-        "time-0930 ........"
-        "time-1000 ........"
-        "time-1030 info340A"
-        "time-1100 info340A"
-        "time-1130 info340A"
-        "time-1200 info340A"
-        "time-1230 info340A"
-        "time-1300 ........"
-        "time-1330  studyA "
-        "time-1400  studyA "
-        "time-1430  studyA "
-        "time-1500  studyA "
-        "time-1530  studyA ";
-    grid-template-columns: 1fr 5fr;
-    grid-auto-rows: 25px;
+    grid-template-columns: 4em [monday] 1fr;
+    grid-template-rows:
+        [weekdays] 1fr
+        [time-0800] 1fr
+        [time-0830] 1fr
+        [time-0900] 1fr
+        [time-0930] 1fr
+        [time-1000] 1fr
+        [time-1030] 1fr
+        [time-1100] 1fr
+        [time-1130] 1fr
+        [time-1200] 1fr
+        [time-1230] 1fr
+        [time-1300] 1fr
+        [time-1330] 1fr
+        [time-1400] 1fr
+        [time-1430] 1fr
+        [time-1500] 1fr
+        [time-1530] 1fr
+        [time-1600] 1fr
+        [time-1630] 1fr
+        [time-1700] 1fr
+        [time-1730] 1fr
+        [time-1800] 1fr
+        [time-1830] 1fr
+        [time-1900] 1fr
+        [time-1930] 1fr
+        [time-2000] 1fr
+        [time-2030] 1fr;
     z-index: 1000;
 }
 
 .my-schedule-grid :is(
     .tue, .wed, .thu, .fri, .sat, .sun,
-    .info310A, .info310B, .info370A, .info370B, .info340B,
-    .studyB, .studyC, .work, .game, .tennis, .mass, .movie
+    .info310, .info370B, .info340, .study,
+    .workB, .game, .tennis, .mass, .movie
     ) {
-    display: none;
+        display: none;
 }
 
 
@@ -312,6 +167,17 @@ span.event-title {
 .weekday {
     border-radius: 10px;
 }
+
+/* .time:nth-child(2n - 1):after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: -1;
+} */
+
 
 /* MY GROUPS */
 
@@ -451,26 +317,21 @@ p.footer-links a {
     .my-schedule-grid {
         display: grid;
         gap: .5em .8em;
-        grid-template-areas: 
-            "  edit      mon      tue      wed      thu      fri      sat      sun   "
-            "time-0800 ........ ........ ........ ........ ........ ........ ........"
-            "time-0830 ........ info310A ........ info310B ........ ........   mass  "
-            "time-0900 ........ info310A ........ info310B ........ ........   mass  "
-            "time-0930 ........ info310A ........ info310B   work   ........   mass  "
-            "time-1000 ........ info310A ........ info310B   work   ........ ........"
-            "time-1030 info340A info310A info340B info310B   work    tennis   tennis "
-            "time-1100 info340A ........ info340B ........   work    tennis   tennis "
-            "time-1130 info340A ........ info340B ........   work    tennis   tennis "
-            "time-1200 info340A ........ info340B ........   work    tennis   tennis "
-            "time-1230 info340A info370A info340B info370B   work   ........ ........"
-            "time-1300 ........ info370A ........ info370B   work   ........  movie  "
-            "time-1330  studyA  info370A  studyB  info370B ........ ........  movie  "
-            "time-1400  studyA  info370A  studyB  info370B   game    studyC   movie  "
-            "time-1430  studyA  info370A  studyB  info370B   game    studyC   movie  "
-            "time-1500  studyA  ........  studyB  ........   game    studyC  ........"
-            "time-1530  studyA  ........  studyB  ........   game    studyC  ........";
-        grid-template-columns: .5fr repeat(7, 1fr);
-        grid-auto-rows: 50px;
+        grid-template-columns:
+            [empty] 5em
+            [monday] 1fr
+            [monday-end tuesday-start] 1fr
+            [tuesday-end wednesday-start] 1fr
+            [wednesday-end thursday-start] 1fr
+            [thursday-end friday-start] 1fr
+            [friday-end saturday-start] 1fr
+            [saturday-end sunday-start] 1fr
+            [sunday-end];
+
+    }
+
+    .my-schedule-grid :is(.tue, .wed, .thu, .fri, .sat, .sun) {
+        display: grid;
     }
 
     .my-schedule-grid :is(.tue, .wed, .thu, .fri, .sat, .sun) {
@@ -478,9 +339,10 @@ p.footer-links a {
     }
 
     .my-schedule-grid :is(
-        .info310A, .info310B, .info370A, .info370B, .info340B,
-        .studyB, .studyC, .work, .game, .tennis, .mass, .movie) {
-        display: block;
+        .info310, .info370B, .info340, .study,
+        .workB, .game, .tennis, .mass, .movie
+        ) {
+            display: block;
     }
 
     .event:hover {
@@ -549,4 +411,3 @@ p.footer-links a {
     }
 
 }
-
