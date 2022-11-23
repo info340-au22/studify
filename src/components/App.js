@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
 
+import { Header } from './Header';
+import { Schedule } from './Schedule';
+import { Groups } from './Groups';
+import { Profile } from './Profile';
+import { Footer } from './Footer';
+
 import { Route, Routes, Outlet } from 'react-router-dom';
 
 export default function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src=''className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body className="Studify">
+      <Header />
+      {/* <Schedule /> */}
+      {/* <Groups /> */}
+      <Profile />
+      <Footer />
+    </body>
   );
 }
