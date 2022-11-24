@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Studify - My Groups</title>
+        <meta name="description" content="Studify My Groups">
+        <meta name="author" content="Minh Mai, Luong Quan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Navigation Bar -->
+            <nav class="main-nav navbar sticky-top navbar-expand-md">
+                <div class="container-fluid">          
+                    <!-- Hamburger Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Logo and Website Name -->
+                    <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
+                    <span class="navbar-brand d-none d-md-block mb-0 h1"><h1 class="title">Studify</h1></span>
+                    <!-- Sign Out Button -->
+                    <button class="btn btn-secondary sign-out ms-md-3 order-md-last" type="button">
+                        <span class="fa-solid fa-right-from-bracket"></span>
+                        <span class="d-none d-md-inline"> Sign Out</span>
+                    </button>
+                    <!-- Collapsible Navigation Bar -->
+                    <div class="collapse me-auto navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">Profile</a>
+                            </li>
+                            <!-- Dropdown Menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Mission</a></li>
+                                    <li><a class="dropdown-item" href="#">Creators</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>       
+                </div>
+            </nav>
+            <h2>Groups</h2>
+        </header>
+        <main class="container my-groups">
+
+            <section class="secondary-navbar">
+                <nav class="navbar mb-4">
+                    <div class="container-fluid bg-light p-0">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">My Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Join Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Create Group</a>
+                            </li>
+                        </ul>
+                        <form class="search-form d-flex flex-grow-1 flex-md-grow-0 order-first order-md-last pb-3 pb-md-0" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search Groups" aria-label="Search"/>
+                            <button class="btn btn-outline-success" type="submit">
+                                <span class="fa-solid fa-magnifying-glass"></span>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="cards-my-groups mx-auto row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/XopauR-Nagk" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 340</h3>
+                            <p class="card-text">Client-Side Development</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">101 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/C5pXRFEjq3w" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 310</h3>
+                            <p class="card-text">Information Assurance And Cybersecurity</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">46 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/SYTO3xs06fU" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">CS Careers</h3>
+                            <p class="card-text">Interviews, Leetcode, and More</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">187 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/JKUTrJ4vK00" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">INFO 370</h3>
+                            <p class="card-text">Core Methods in Data Science</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">89 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/ViEBSoZH6M4" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">MATH 208</h3>
+                            <p class="card-text">Linear Algebra</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">110 members | Public</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <button class="btn btn-link align-self-end pb-0">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </button>
+                        <img src="https://source.unsplash.com/vL-R502ZxuM" class="card-img-top img-thumbnail mx-auto d-block" alt="..."/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Dumblings</h3>
+                            <p class="card-text">Procrastinating Dumblings</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">23 members | Private</small>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/UWiSchool" target="_blank">
+                    <span class="fa-brands fa-facebook"></span>
+                </a>
+                <a href="https://twitter.com/uw_ischool" target="_blank">
+                    <span class="fa-brands fa-twitter"></span>
+                </a>
+                <a href="https://www.linkedin.com/school/uw-ischool" target="_blank">
+                    <span class="fa-brands fa-linkedin"></span>
+                </a>
+                <a href="https://github.com/info340-au22" target="_blank">
+                    <span class="fa-brands fa-github"></span>
+                </a>
+            </div>
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a class="link-1" href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </p>
+                <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan. Made in &#127783; Seattle.</p>
+            </div>
+        </footer>
+        <!-- JavaScript -->
+        <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

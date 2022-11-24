@@ -1,0 +1,38 @@
+[
+    { 
+        "title": "INFO 340",
+        "text": "Client-Side Development",
+        "footer": "101 members | Public",
+        "image": "../img/info-340.jpeg"
+    },
+    { 
+        "title": "INFO 310",
+        "text": "Information Assurance And Cybersecurity",
+        "footer": "46 members | Public",
+        "image": "../img/info-310.jpeg"
+    },
+    { 
+        "title": "CS Careers",
+        "text": "Interviews, Leetcode, and More",
+        "footer": "187 members | Public",
+        "image": "../img/cs-careers.jpeg"
+    },
+    { 
+        "title": "INFO 370",
+        "text": "Core Methods in Data Science",
+        "footer": "89 members | Public",
+        "image": "../img/info-370.jpeg"
+    },
+    { 
+        "title": "MATH 208",
+        "text": "Linear Algebra",
+        "footer": "110 members | Public",
+        "image": "../img/math-208.jpeg"
+    },
+    { 
+        "title": "Dumblings",
+        "text": "Procrastinating Dumblings",
+        "footer": "23 members | Private",
+        "image": "../img/dumblings.jpeg"
+    }
+]

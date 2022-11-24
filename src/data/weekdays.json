@@ -1,0 +1,9 @@
+[
+    { "class": "mon", "text": "Monday" },
+    { "class": "tue", "text": "Tuesday" },
+    { "class": "wed", "text": "Wednesday" },
+    { "class": "thu", "text": "Thursday" },
+    { "class": "fri", "text": "Friday" },
+    { "class": "sat", "text": "Saturday" },
+    { "class": "sun", "text": "Sunday" }
+]

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Studify - Home</title>
+        <meta name="description" content="Studify My Schedule">
+        <meta name="author" content="Minh Mai, Luong Quan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="icon" href="img/studify-icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">    
+    </head>
+    <body>
+        <header>
+            <!-- Navigation Bar -->
+            <nav class="main-nav navbar sticky-top navbar-expand-lg">
+                <div class="container-fluid">          
+                    <!-- Hamburger Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Logo and Website Name -->
+                    <a class="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/"><img class="logo" src="img/studify-icon.png" alt="Studify logo"></a>
+                    <span class="navbar-brand d-none d-lg-block mb-0 h1"><h1 class="title">Studify</h1></span>
+                    <!-- Sign Out Button -->
+                    <button class="btn btn-secondary sign-out ms-lg-3 order-lg-last" type="button">
+                        <span class="fa-solid fa-right-from-bracket"></span>
+                        <span class="d-none d-lg-inline"> Sign Out</span>
+                    </button>
+                    <!-- Collapsible Navigation Bar -->
+                    <div class="collapse me-auto navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">Profile</a>
+                            </li>
+                            <!-- Dropdown Menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Mission</a></li>
+                                    <li><a class="dropdown-item" href="#">Creators</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>       
+                </div>
+            </nav>
+            <h2>My Schedule</h2>
+        </header>
+        <!-- Main -->
+        <main class="container my-schedule pt-lg-0">
+            <!-- Weekday Select Section -->
+            <section class="weekday-select d-lg-none">
+                <select class="form-select-sm mb-3" aria-label="Weekday select">
+                    <option selected value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="7">Sunday</option>
+                </select>
+            </section>
+            <!-- Schedule Section -->
+            <section class="my-schedule-grid full-width">
+                <div class="edit-button">
+                    <button type="button" class="btn btn-info btn-sm">
+                        <small class="fa-solid fa-pen-to-square"></small>
+                        <span class="d-none d-lg-inline"> Edit</span>
+                    </button>
+                </div>
+                <!-- Weekday Columns -->
+                <div class="weekday mon">Monday</div>
+                <div class="weekday tue">Tuesday</div>
+                <div class="weekday wed">Wednesday</div>
+                <div class="weekday thu">Thursday</div>
+                <div class="weekday fri">Friday</div>
+                <div class="weekday sat">Saturday</div>
+                <div class="weekday sun">Sunday</div>
+                <!-- Time Rows -->
+                <div class="time time-0800" style="grid-row: time-0800;">8am</div>
+                <div class="time time-0830" style="grid-row: time-0830;"></div>
+                <div class="time time-0900" style="grid-row: time-0900;">9am</div>
+                <div class="time time-0930" style="grid-row: time-0930;"></div>
+                <div class="time time-1000" style="grid-row: time-1000;">10am</div>
+                <div class="time time-1030" style="grid-row: time-1030;"></div>
+                <div class="time time-1100" style="grid-row: time-1100;">11am</div>
+                <div class="time time-1130" style="grid-row: time-1130;"></div>
+                <div class="time time-1200" style="grid-row: time-1200;">12pm</div>
+                <div class="time time-1230" style="grid-row: time-1230;"></div>
+                <div class="time time-1300" style="grid-row: time-1300;">1pm</div>
+                <div class="time time-1330" style="grid-row: time-1330;"></div>
+                <div class="time time-1400" style="grid-row: time-1400;">2pm</div>
+                <div class="time time-1430" style="grid-row: time-1430;"></div>
+                <div class="time time-1500" style="grid-row: time-1500;">3pm</div>
+                <div class="time time-1530" style="grid-row: time-1530;"></div>
+                <div class="time time-1600" style="grid-row: time-1600;">4pm</div>
+                <div class="time time-1630" style="grid-row: time-1630;"></div>
+                <div class="time time-1700" style="grid-row: time-1700;">5pm</div>
+                <div class="time time-1730" style="grid-row: time-1730;"></div>
+                <div class="time time-1800" style="grid-row: time-1800;">6pm</div>
+                <div class="time time-1830" style="grid-row: time-1830;"></div>
+                <div class="time time-1900" style="grid-row: time-1900;">7pm</div>
+                <div class="time time-1930" style="grid-row: time-1930;"></div>
+                <div class="time time-2000" style="grid-row: time-2000;">8pm</div>
+                <div class="time time-2030" style="grid-row: time-2030;"></div>
+                <!-- Events Section -->
+                <div class="event info340" style="grid-column: tuesday; grid-row: time-1330 / time-1530;">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event info340" style="grid-column: thursday; grid-row: time-1330 / time-1530;">
+                    <span class="event-title">INFO 340</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event info370A" style="grid-column: monday; grid-row: time-1730 / time-1930;">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event info370B" style="grid-column: wednesday; grid-row: time-1730 / time-1930;">
+                    <span class="event-title">INFO 370</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event info310" style="grid-column: tuesday; grid-row: time-1130 / time-1330;">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event info310" style="grid-column: thursday; grid-row: time-1130 / time-1330;">
+                    <span class="event-title">INFO 310</span><br>
+                    <span class="form-check event-todolist">
+                        <input class="form-check-input" type="checkbox" value="homework">
+                        <label class="form-check-label">Problem Set</label>
+                    </span>
+                </div>
+                <div class="event study" style="grid-column: friday; grid-row: time-1200 / time-2000;">
+                    <span class="event-title">Self Study</span><br>
+                </div>
+                <div class="event workA" style="grid-column: monday; grid-row: time-0900 / time-1230;">
+                    <span class="event-title">Work</span><br>
+                </div>
+                <div class="event workB" style="grid-column: wednesday; grid-row: time-0900 / time-1230;">
+                    <span class="event-title">Work</span><br>
+                </div>
+                <div class="event tennis" style="grid-column: saturday / sunday; grid-row: time-1030 / time-1230;">
+                    <span class="event-title">Tennis</span><br>
+                </div>
+                <div class="event game" style="grid-column: saturday; grid-row: time-1700 / time-2030;">
+                    <span class="event-title">Game</span><br>
+                </div>
+                <div class="event movie" style="grid-column: sunday; grid-row: time-1530 / time-1930;">
+                    <span class="event-title">Movie</span><br>
+                </div>
+                <div class="event mass" style="grid-column: sunday; grid-row: time-0830 / time-0930;">
+                    <span class="event-title">Sunday Mass</span><br>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <!-- Social Media -->
+            <div class="footer-right">
+                <a href="https://www.facebook.com/UWiSchool" target="_blank">
+                    <span class="fa-brands fa-facebook"></span>
+                </a>
+                <a href="https://twitter.com/uw_ischool" target="_blank">
+                    <span class="fa-brands fa-twitter"></span>
+                </a>
+                <a href="https://www.linkedin.com/school/uw-ischool" target="_blank">
+                    <span class="fa-brands fa-linkedin"></span>
+                </a>
+                <a href="https://github.com/info340-au22" target="_blank">
+                    <span class="fa-brands fa-github"></span>
+                </a>
+            </div>
+            <!-- Information and Copyright -->
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a class="link-1" href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </p>
+                <p class="footer-copyright">&copy; 2022 Minh Mai and Luong Quan. Made in &#127783; Seattle.</p>
+            </div>
+        </footer>
+        <!-- JavaScript -->
+        <script src="https://kit.fontawesome.com/cae67a61bf.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
