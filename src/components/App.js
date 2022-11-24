@@ -19,7 +19,7 @@ export default function App(props) {
       <Header />
       <Routes>
         <Route index element={ <Schedule /> } />
-        <Route path='/groups/*' element={ <Groups /> } />
+        <Route path='/groups' element={ <Groups /> } />
         <Route path='/profile' element={ <Profile currentUser={currentUser} /> } />
       </Routes>
       <Footer />

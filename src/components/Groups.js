@@ -9,13 +9,13 @@ function GroupsNavBar(props) {
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">My Groups</a>
+                <a className="nav-link active" aria-current="page" href="">My Groups</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Join Groups</a>
+                <a className="nav-link" href="">Join Groups</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Create Group</a>
+                <a className="nav-link" href="">Create Group</a>
             </li>
         </ul>
     )
