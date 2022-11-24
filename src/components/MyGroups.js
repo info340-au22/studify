@@ -1,7 +1,5 @@
 import React from 'react';
 
-import GROUP_DATA from '../data/groups.json';
-
 function CardGroup(props) {
     const groupData = props.groupData;
     const groupDiv = groupData.map(groupObj => {

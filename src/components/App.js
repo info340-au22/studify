@@ -6,7 +6,7 @@ import { Groups } from './Groups';
 import { Profile } from './Profile';
 import { Footer } from './Footer';
 
-import { Route, Routes, Outlet } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import USER_DATA from '../data/users.json';
 
