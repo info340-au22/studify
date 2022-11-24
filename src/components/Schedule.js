@@ -1,22 +1,25 @@
 import React from 'react';
 
+import WEEKDAY_DATA from '../data/weekdays.json'
+
 function WeekdaySelect(props) {
+    const weekdayOption = WEEKDAY_DATA.map((weekdayObj, index) => {
+        return (
+            <option key={weekdayObj.class} value={index + 1}>{weekdayObj.text}</option>
+        )
+    })
+    // console.log(weekdayOption)
     return (
         <section className="weekday-select d-lg-none">
             <select className="form-select-sm mb-3" aria-label="Weekday select">
-                <option defaultValue value="1">Monday</option>
-                <option value="2">Tuesday</option>
-                <option value="3">Wednesday</option>
-                <option value="4">Thursday</option>
-                <option value="5">Friday</option>
-                <option value="6">Saturday</option>
-                <option value="7">Sunday</option>
+                {weekdayOption}
             </select>
         </section>
     )
 }
 
 function ScheduleGrid(props) {
+
     return (
         <section className="my-schedule-grid full-width">
             <div className="edit-button">

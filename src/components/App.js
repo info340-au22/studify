@@ -10,12 +10,12 @@ import { Route, Routes, Outlet } from 'react-router-dom';
 
 export default function App(props) {
   return (
-    <body className="Studify">
+    <div className="studify-app">
       <Header />
-      {/* <Schedule /> */}
+      <Schedule />
       {/* <Groups /> */}
-      <Profile />
+      {/* <Profile /> */}
       <Footer />
-    </body>
+    </div>
   );
 }
