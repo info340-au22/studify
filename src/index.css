@@ -115,7 +115,7 @@ span.event-title {
   gap: .5em;
   grid-template-columns: 4em [monday] 1fr;
   grid-template-rows:
-      [weekdays] 40px
+      [weekdays] auto
       [time-0800] 1fr
       [time-0830] 1fr
       [time-0900] 1fr
@@ -161,6 +161,7 @@ span.event-title {
   background-color: rgba(106, 189, 210, .9);
   place-items: center;
   z-index: 500;
+  padding: 15px;
 }
 
 .event,

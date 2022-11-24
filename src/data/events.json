@@ -1,0 +1,125 @@
+[
+    { 
+        "name": "info340",
+        "title": "INFO 340", 
+        "date": "tuesday",
+        "time": {
+            "timeStart": "time-1330",
+            "timeEnd": "time-1530"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info340",
+        "title": "INFO 340", 
+        "date": "thursday",
+        "time": {
+            "timeStart": "time-1330",
+            "timeEnd": "time-1530"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info370A",
+        "title": "INFO 370", 
+        "date": "monday",
+        "time": {
+            "timeStart": "time-1730",
+            "timeEnd": "time-1930"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info370B",
+        "title": "INFO 370", 
+        "date": "wednesday",
+        "time": {
+            "timeStart": "time-1730",
+            "timeEnd": "time-1930"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info310",
+        "title": "INFO 310", 
+        "date": "tuesday",
+        "time": {
+            "timeStart": "time-1130",
+            "timeEnd": "time-1330"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info310",
+        "title": "INFO 310", 
+        "date": "thursday",
+        "time": {
+            "timeStart": "time-1130",
+            "timeEnd": "time-1330"
+        },
+        "activity": "Problem Set"
+    },
+    {
+        "name": "workA",
+        "title": "Work", 
+        "date": "monday",
+        "time": {
+            "timeStart": "time-0900",
+            "timeEnd": "time-1230"
+        }
+    },
+    {
+        "name": "workB",
+        "title": "Work", 
+        "date": "wednesday",
+        "time": {
+            "timeStart": "time-0900",
+            "timeEnd": "time-1230"
+        }
+    },
+    {
+        "name": "study",
+        "title": "Self Study", 
+        "date": "friday",
+        "time": {
+            "timeStart": "time-1200",
+            "timeEnd": "time-2000"
+        }
+    },
+    {
+        "name": "mass",
+        "title": "Sunday Mass", 
+        "date": "sunday",
+        "time": {
+            "timeStart": "time-0830",
+            "timeEnd": "time-0930"
+        }
+    },
+    {
+        "name": "game",
+        "title": "Game", 
+        "date": "saturday",
+        "time": {
+            "timeStart": "time-1700",
+            "timeEnd": "time-2030"
+        }
+    },
+    {
+        "name": "movie",
+        "title": "Movie", 
+        "date": "sunday",
+        "time": {
+            "timeStart": "time-1530",
+            "timeEnd": "time-1930"
+        }
+    },
+    {
+        "name": "tennis",
+        "title": "Tennis", 
+        "date": "saturday / sunday",
+        "time": {
+            "timeStart": "time-1030",
+            "timeEnd": "time-1230"
+        }
+    }
+]

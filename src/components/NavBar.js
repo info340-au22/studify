@@ -48,10 +48,10 @@ function CollapsibleNavBar(props) {
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Mission</a></li>
-                        <li><a className="dropdown-item" href="#">Creators</a></li>
+                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Mission</a></li>
+                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Creators</a></li>
                         <li><hr className="dropdown-divider"/></li>
-                        <li><a className="dropdown-item" href="#">Contact</a></li>
+                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Contact</a></li>
                     </ul>
                 </li>
             </ul>
