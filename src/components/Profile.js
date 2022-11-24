@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-import USER_DATA from '../data/users.json';
-
 function ProfileImage(props) {
 
-    const [currentUser, setCurrentUser] = useState(USER_DATA[0]);
+    const currentUser = props.currentUser;
 
     return (
         <div className="col-md-6 mb-3">
@@ -44,7 +42,7 @@ function ProfileImage(props) {
 
 function ProfileInformation(props) {
 
-    const [currentUser, setCurrentUser] = useState(USER_DATA[0]);
+    const currentUser = props.currentUser;
 
     return (
         <div className="col-md-6">
@@ -90,8 +88,8 @@ export function Profile(props) {
     return (
         <main className="container my-profile">
             <div className="row gutters-sm">
-                <ProfileImage />
-                <ProfileInformation />
+                <ProfileImage currentUser={props.currentUser} />
+                <ProfileInformation currentUser={props.currentUser} />
             </div>
         </main>
     )

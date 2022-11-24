@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 function NavBarToggler(props) {
     return (
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,22 +38,22 @@ function CollapsibleNavBar(props) {
         <div className="collapse me-auto navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="https://info340-au22.github.io/project-mcm2304/">Home</a>
+                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-groups.html">Groups</a>
+                    <Link className="nav-link" to="/groups">Groups</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="https://info340-au22.github.io/project-mcm2304/my-profile.html">Profile</a>
+                    <Link className="nav-link" to="/profile">Profile</Link>
                 </li>
 
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Mission</a></li>
-                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Creators</a></li>
+                        <li><a className="dropdown-item" href="https://youtu.be/dQw4w9WgXcQ">Mission</a></li>
+                        <li><a className="dropdown-item" href="https://youtu.be/dQw4w9WgXcQ">Creators</a></li>
                         <li><hr className="dropdown-divider"/></li>
-                        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Contact</a></li>
+                        <li><a className="dropdown-item" href="https://youtu.be/dQw4w9WgXcQ">Contact</a></li>
                     </ul>
                 </li>
             </ul>
