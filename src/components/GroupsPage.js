@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import { MyGroups } from './MyGroups';
 import { JoinGroups } from './JoinGroups';
 
 import GROUP_DATA from '../data/groups.json';
 
+
+
 function GroupsNavBar(props) {
+    // const urlParamsObj = useParams();
+    // console.log(urlParamsObj)
+
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="">My Groups</a>
+                <Link className="nav-link active" aria-current="page" to="/groups/my-groups">My Groups</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="">Join Groups</a>
+                <Link className="nav-link" to="/groups/join-groups">Join Groups</Link>
             </li>
             <li className="nav-item">
                 <a className="nav-link" href="">Create Group</a>
@@ -32,7 +40,7 @@ function GroupsSearchForm(props) {
     )
 }
 
-export function Groups(props) {
+export function GroupsPage(props) {
     const [filteredGroupData, setFilteredGroupData] = useState(GROUP_DATA);
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -42,23 +50,30 @@ export function Groups(props) {
 
     const handleClick = (event) => {
         const filteredGroupData = GROUP_DATA.filter(groupObj => {
-            return groupObj.title.toLowerCase().includes(searchQuery.toLowerCase())
+            let titleString = groupObj.title.toLowerCase().replace(/ /g,'');
+            let queryString = searchQuery.toLowerCase().replace(/ /g,'');
+            return titleString.includes(queryString)
         })
         setFilteredGroupData(filteredGroupData) 
     }
 
     return (
-        <main className="container my-groups">
-            <section className="secondary-navbar">
-                <nav className="navbar mb-4">
-                    <div className="container-fluid bg-light p-0">
-                        <GroupsNavBar />
-                        <GroupsSearchForm handleChangeCallback={handleChange} handleClickCallback={handleClick} />
-                    </div>
-                </nav>
-            </section>
-            <MyGroups groupData={filteredGroupData} />
-            {/* <JoinGroups groupData={filteredGroupData} /> */}
-        </main>
+        <div>
+            <Helmet>
+                <title>Studify - Groups</title>
+            </Helmet>
+            <main className="container my-groups">
+                <section className="secondary-navbar">
+                    <nav className="navbar mb-4">
+                        <div className="container-fluid bg-light p-0">
+                            <GroupsNavBar />
+                            <GroupsSearchForm handleChangeCallback={handleChange} handleClickCallback={handleClick} />
+                        </div>
+                    </nav>
+                </section>
+                <MyGroups groupData={filteredGroupData} />         
+                {/* <JoinGroups groupData={filteredGroupData} /> */}
+            </main>
+        </div>
     )
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet';
+
 import WEEKDAY_DATA from '../data/weekdays.json';
 import TIME_DATA from '../data/time-slots.json';
 import EVENT_DATA from '../data/events.json';
@@ -95,11 +97,16 @@ function ScheduleGrid(props) {
     )
 }
 
-export function Schedule(props) {
+export function HomePage(props) {
     return (
-        <main className="container my-schedule pt-lg-0">
-            <WeekdaySelect />
-            <ScheduleGrid />
-        </main>
+        <div>
+            <Helmet>
+                <title>Studify - Home</title>
+            </Helmet>
+            <main className="container my-schedule pt-lg-0">
+                <WeekdaySelect />
+                <ScheduleGrid />
+            </main>
+        </div>
     )
 }

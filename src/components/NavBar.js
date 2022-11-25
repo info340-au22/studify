@@ -12,8 +12,8 @@ function NavBarToggler(props) {
 
 function StudifyLogo(props) {
     return (
-        <a className="navbar-brand" href="https://info340-au22.github.io/project-mcm2304/">
-            <img className="logo" src="img/studify-icon.png" alt="Studify logo"/>
+        <a className="navbar-brand" href="https://studify-883c3.web.app/">
+            <img className="logo" src="../img/studify-icon.png" alt="Studify logo"/>
         </a>
     )
 }
@@ -41,7 +41,7 @@ function CollapsibleNavBar(props) {
                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/groups">Groups</Link>
+                    <Link className="nav-link" to="/groups/my-groups">Groups</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/profile">Profile</Link>

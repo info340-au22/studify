@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet';
+
 function ProfileImage(props) {
 
     const currentUser = props.currentUser;
@@ -84,13 +86,18 @@ function ProfileInformation(props) {
     )
 }
 
-export function Profile(props) {
+export function ProfilePage(props) {
     return (
-        <main className="container my-profile">
-            <div className="row gutters-sm">
-                <ProfileImage currentUser={props.currentUser} />
-                <ProfileInformation currentUser={props.currentUser} />
-            </div>
-        </main>
+        // <div className='test'>
+        //     <Helmet>
+        //         <title>Studify - Profile</title>
+        //     </Helmet>
+            <main className="container my-profile">
+                <div className="row gutters-sm">
+                    <ProfileImage currentUser={props.currentUser} />
+                    <ProfileInformation currentUser={props.currentUser} />
+                </div>
+            </main>
+        // </div>
     )
 }

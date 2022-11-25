@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import { Header } from './Header';
-import { Schedule } from './Schedule';
-import { Groups } from './Groups';
-import { Profile } from './Profile';
+import { HomePage } from './HomePage';
+import { GroupsPage } from './GroupsPage';
+import { ProfilePage } from './ProfilePage';
 import { Footer } from './Footer';
 
 import { Route, Routes } from 'react-router-dom';
@@ -18,9 +18,9 @@ export default function App(props) {
     <div className="studify-app">
       <Header />
       <Routes>
-        <Route index element={ <Schedule /> } />
-        <Route path='/groups' element={ <Groups /> } />
-        <Route path='/profile' element={ <Profile currentUser={currentUser} /> } />
+        <Route index element={ <HomePage /> } />
+        <Route path='/groups/:groupSection' element={ <GroupsPage /> } />
+        <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
       </Routes>
       <Footer />
     </div>
