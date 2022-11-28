@@ -24,6 +24,7 @@
     { "time": "time-1900", "text": "7pm" },
     { "time": "time-1930" },
     { "time": "time-2000", "text": "8pm" },
-    { "time": "time-2030" }
-
+    { "time": "time-2030" },
+    { "time": "time-2100", "text": "9pm" },
+    { "time": "time-2130" }
 ]

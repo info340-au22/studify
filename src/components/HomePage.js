@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet';
 
 import WEEKDAY_DATA from '../data/weekdays.json';
@@ -88,7 +87,7 @@ function ScheduleGrid(props) {
     })
 
     return (
-        <section className="my-schedule-grid full-width">
+        <section className="my-schedule-grid">
             {editButtonDiv}
             {weekdayDiv}
             {timeDiv}
@@ -97,16 +96,17 @@ function ScheduleGrid(props) {
     )
 }
 
-export function HomePage(props) {
+export default function HomePage(props) {
     return (
-        <div>
+        <>
             <Helmet>
-                <title>Studify - Home</title>
+                <title>Studify | Home</title>
             </Helmet>
             <main className="container my-schedule pt-lg-0">
+                <h2>My Schedule</h2>
                 <WeekdaySelect />
                 <ScheduleGrid />
             </main>
-        </div>
+        </>
     )
 }
