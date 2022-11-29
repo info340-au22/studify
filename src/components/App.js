@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import HeaderBar from './HeaderBar';
-import HomePage from './HomePage';
+import HomePage from './home-page/HomePage';
 import GroupsPage from './groups-page/GroupsPage';
+import { MyGroups } from './groups-page/MyGroups';
+import { JoinGroups } from './groups-page/JoinGroups';
 import ProfilePage from './profile-page/ProfilePage';
 import Footer from './Footer';
+import * as Static from './StaticPages'
 
 import USER_DATA from '../data/users.json';
 import GROUP_DATA from '../data/groups.json';
-import { MyGroups } from './groups-page/MyGroups';
-import { JoinGroups } from './groups-page/JoinGroups';
 
 export default function App(props) {
 
@@ -32,7 +33,7 @@ export default function App(props) {
   }
 
   return (
-    <div className="studify-app">
+    <>
       <HeaderBar />
       <Routes>
         <Route index element={ <HomePage /> } />
@@ -42,8 +43,9 @@ export default function App(props) {
           <Route path='/groups/join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
         </Route>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
+        <Route path='*' element={ <Static.ErrorPage />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }

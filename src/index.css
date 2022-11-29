@@ -7,7 +7,7 @@
   
 } */
 
-.studify-app {
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -143,8 +143,10 @@ span.event-title {
       [time-2000] 1fr
       [time-2030] 1fr
       [time-2100] 1fr
-      [time-2130] 1fr;
-  z-index: 1000;
+      [time-2130] 1fr
+      [time-2200] 1fr
+      [time-2230] 1fr;
+  z-index: 500;
 }
 
 .my-schedule-grid :is(
@@ -292,6 +294,33 @@ p.footer-links a {
   transition: all .25s;
 }
 
+/* STATIC PAGES */
+
+.error-page {
+  display: grid;
+  place-content: center;
+}
+
+.error-msg h2 {
+  font-size: 28px;
+}
+
+.error, .error-2 {
+  font-size: 1.2em;
+}
+
+.error-404 {
+  font-size: 5em;
+}
+
+.error-404 span {
+  padding: 0 5px;
+}
+
+.error-page .btn {
+  margin: auto;
+  border-radius: 100px;
+}
 
 /* Media Queries */
 
@@ -376,6 +405,14 @@ p.footer-links a {
       float: right;
       margin-top: 10px;
       max-width: 180px;
+  }
+
+  .error-msg h2 {
+    font-size: 32px;
+  }
+
+  .error-msg p {
+    font-size: 18px
   }
 
   .main-nav .nav-item a:hover,

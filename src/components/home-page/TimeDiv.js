@@ -1,4 +1,6 @@
-[
+import React from 'react';
+
+const TIME_SLOTS = [
     { "time": "time-0800", "text": "8am" },
     { "time": "time-0830" },
     { "time": "time-0900", "text": "9am" },
@@ -26,5 +28,25 @@
     { "time": "time-2000", "text": "8pm" },
     { "time": "time-2030" },
     { "time": "time-2100", "text": "9pm" },
-    { "time": "time-2130" }
+    { "time": "time-2130" },
+    { "time": "time-2200", "text": "10pm" },
+    { "time": "time-2230" }
 ]
+
+export function TimeSlots(props) {
+    const timeDiv = TIME_SLOTS.map(timeObj => {
+        const time = timeObj.time;
+        if (timeObj.hasOwnProperty('text')) {
+            return (
+                <div key={time} className={'time ' + time} style={{gridRow: time}}>
+                    {timeObj.text}
+                </div>)
+        } else {
+            return (
+                <div key={time} className={'time ' + time} style={{gridRow: time}}>
+                </div>
+            )
+        }
+    })
+    return timeDiv;
+}
