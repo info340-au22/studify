@@ -1,6 +1,10 @@
 import React from 'react';
 
 const TIME_SLOTS = [
+    { "time": "time-0600", "text": "6am" },
+    { "time": "time-0630" },
+    { "time": "time-0700", "text": "7am" },
+    { "time": "time-0730" },
     { "time": "time-0800", "text": "8am" },
     { "time": "time-0830" },
     { "time": "time-0900", "text": "9am" },
@@ -30,7 +34,9 @@ const TIME_SLOTS = [
     { "time": "time-2100", "text": "9pm" },
     { "time": "time-2130" },
     { "time": "time-2200", "text": "10pm" },
-    { "time": "time-2230" }
+    { "time": "time-2230" },
+    { "time": "time-2300", "text": "11pm" },
+    { "time": "time-2330" }
 ]
 
 export function TimeSlots(props) {

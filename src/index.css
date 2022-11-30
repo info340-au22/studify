@@ -116,6 +116,10 @@ span.event-title {
   grid-template-columns: 4em [monday] 1fr;
   grid-template-rows:
       [weekdays] auto
+      [time-0600] 1fr
+      [time-0630] 1fr
+      [time-0700] 1fr
+      [time-0730] 1fr
       [time-0800] 1fr
       [time-0830] 1fr
       [time-0900] 1fr
@@ -145,7 +149,9 @@ span.event-title {
       [time-2100] 1fr
       [time-2130] 1fr
       [time-2200] 1fr
-      [time-2230] 1fr;
+      [time-2230] 1fr
+      [time-2300] 1fr
+      [time-2330] 1fr;
   z-index: 500;
 }
 

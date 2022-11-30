@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Nav, Button, Form } from 'react-bootstrap';
 
@@ -7,10 +7,10 @@ function GroupsNavBar(props) {
     return (
         <Nav variant='tabs'>
             <Nav.Item>
-                <Link className="nav-link" to="my-groups">My Groups</Link>
+                <NavLink className="nav-link" to="my-groups">My Groups</NavLink>
             </Nav.Item>
             <Nav.Item>
-                <Link className="nav-link" to="join-groups">Join Groups</Link>
+                <NavLink className="nav-link" to="join-groups">Join Groups</NavLink>
             </Nav.Item>
         </Nav>
     )
