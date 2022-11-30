@@ -64,7 +64,7 @@
         "title": "Work", 
         "date": "monday",
         "time": {
-            "timeStart": "time-0900",
+            "timeStart": "time-0930",
             "timeEnd": "time-1230"
         }
     },
@@ -101,7 +101,7 @@
         "date": "saturday",
         "time": {
             "timeStart": "time-1700",
-            "timeEnd": "time-2030"
+            "timeEnd": "time-2130"
         }
     },
     {
@@ -116,7 +116,7 @@
     {
         "name": "tennis",
         "title": "Tennis", 
-        "date": "saturday / sunday",
+        "date": "sunday",
         "time": {
             "timeStart": "time-1030",
             "timeEnd": "time-1230"

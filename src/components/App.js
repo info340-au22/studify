@@ -1,21 +1,51 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { Header } from './Header';
-import { Schedule } from './Schedule';
-import { Groups } from './Groups';
-import { Profile } from './Profile';
-import { Footer } from './Footer';
+import HeaderBar from './HeaderBar';
+import HomePage from './home-page/HomePage';
+import GroupsPage from './groups-page/GroupsPage';
+import { MyGroups } from './groups-page/MyGroups';
+import { JoinGroups } from './groups-page/JoinGroups';
+import ProfilePage from './profile-page/ProfilePage';
+import Footer from './Footer';
+import * as Static from './StaticPages'
 
-import { Route, Routes, Outlet } from 'react-router-dom';
+import USER_DATA from '../data/users.json';
+import GROUP_DATA from '../data/groups.json';
 
 export default function App(props) {
+
+  const [currentUser, setCurrentUser] = useState(USER_DATA[0]);
+  const [filteredGroupData, setFilteredGroupData] = useState(GROUP_DATA);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleChange = (event) => {
+      setSearchQuery(event.target.value);
+  }
+
+  const handleClick = (event) => {
+      const filteredGroupData = GROUP_DATA.filter(groupObj => {
+          let titleString = groupObj.title.toLowerCase().replace(/ /g,'');
+          let queryString = searchQuery.toLowerCase().replace(/ /g,'');
+          return titleString.includes(queryString);
+      })
+      setFilteredGroupData(filteredGroupData);
+  }
+
   return (
-    <div className="studify-app">
-      <Header />
-      <Schedule />
-      {/* <Groups /> */}
-      {/* <Profile /> */}
+    <>
+      <HeaderBar />
+      <Routes>
+        <Route index element={ <HomePage /> } />
+        <Route path='/groups' element={ <GroupsPage handleChangeCallback={handleChange} handleClickCallback={handleClick} /> } >
+          <Route index element={ <MyGroups groupData={filteredGroupData} /> } />
+          <Route path='/groups/my-groups' element={ <MyGroups groupData={filteredGroupData} /> } />
+          <Route path='/groups/join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
+        </Route>
+        <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
+        <Route path='*' element={ <Static.ErrorPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }

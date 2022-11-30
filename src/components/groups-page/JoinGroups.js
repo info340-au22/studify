@@ -1,9 +1,8 @@
 import React from 'react';
 
-import GROUP_DATA from '../data/groups.json';
-
 function CardGroup(props) {
-    const groupDiv = GROUP_DATA.map(groupObj => {
+    const groupData = props.groupData;
+    const groupDiv = groupData.map(groupObj => {
         return (
             <div key={groupObj.title} className="col">
                 <div className="card h-100">
@@ -26,13 +25,13 @@ function CardGroup(props) {
 function CardList(props) {
     return (
         <section className="cards mx-auto row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4">
-            <CardGroup />
+            <CardGroup groupData={props.groupData} />
         </section>
     )
 }
 
 export function JoinGroups(props) {
     return (
-        <CardList />
+        <CardList groupData={props.groupData} />
     )
 }

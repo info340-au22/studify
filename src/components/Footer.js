@@ -1,5 +1,14 @@
 import React from 'react';
 
+export default function Footer(props) {
+    return (
+        <footer>
+            <SocialMedia />
+            <InformationAndCopyRight />
+        </footer>
+    )
+}
+
 function SocialMedia(props) {
     return (
         <div className="footer-right">
@@ -25,18 +34,9 @@ function InformationAndCopyRight(props) {
             <p className="footer-links">
                 <a className="link-1" href="#">About</a>
                 <a href="#">Contact</a>
-                <a href="#">FAQ</a>
+                <a href="#">Feedback</a>
             </p>
-            <p className="footer-copyright">&copy; 2022 Minh Mai and Luong Quan. Made in &#127783; Seattle.</p>
+            <p className="footer-copyright">&copy; 2022 Minh Mai & Luong Quan. Made in &#127783; Seattle.</p>
         </div>
-    )
-}
-
-export function Footer(props) {
-    return (
-        <footer>
-            <SocialMedia />
-            <InformationAndCopyRight />
-        </footer>
     )
 }
