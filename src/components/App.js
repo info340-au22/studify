@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import HeaderBar from './HeaderBar';
-import HomePage from './home-page/HomePage';
+import SchedulePage from './schedule-page/SchedulePage';
 import GroupsPage from './groups-page/GroupsPage';
 import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
 import ProfilePage from './profile-page/ProfilePage';
 import Footer from './Footer';
-import * as Static from './StaticPages'
+import * as Static from './StaticPages';
 
 import USER_DATA from '../data/users.json';
 import GROUP_DATA from '../data/groups.json';
@@ -36,11 +36,11 @@ export default function App(props) {
     <>
       <HeaderBar />
       <Routes>
-        <Route index element={ <HomePage /> } />
+        <Route index element={ <SchedulePage /> } />
         <Route path='/groups' element={ <GroupsPage handleChangeCallback={handleChange} handleClickCallback={handleClick} /> } >
           <Route index element={ <MyGroups groupData={filteredGroupData} /> } />
-          <Route path='/groups/my-groups' element={ <MyGroups groupData={filteredGroupData} /> } />
-          <Route path='/groups/join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
+          <Route path='my-groups' element={ <MyGroups groupData={filteredGroupData} /> } />
+          <Route path='join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
         </Route>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />

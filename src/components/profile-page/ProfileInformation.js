@@ -16,9 +16,9 @@ export function ProfileInformation(props) {
 
             const userElement = (
                 <React.Fragment key={userContentInfo}>
-                    <div className="row">
-                        <div className="col-sm-4">{userContent}</div>
-                        <div className="col-sm-8 text-secondary text-md-end">{userContentInfo}</div>
+                    <div className='row'>
+                        <div className='col-sm-4'>{userContent}</div>
+                        <div className='col-sm-8 text-secondary text-md-end'>{userContentInfo}</div>
                     </div>
                     <hr/>
                 </React.Fragment>
@@ -28,13 +28,13 @@ export function ProfileInformation(props) {
     })
 
     return (
-        <div className="col-md-6">
-            <div className="card mb-3">
-                <div className="card-body">
+        <div className='col-md-6'>
+            <div className='card mb-3'>
+                <div className='card-body'>
                     {userInfoDiv}
-                    <div className="row">
-                        <div className="col-sm-12 text-center">
-                            <a className="btn btn-info" href="#">Edit</a>
+                    <div className='row'>
+                        <div className='col-sm-12 text-center'>
+                            <a className='btn btn-info' href='#'>Edit</a>
                         </div>
                     </div>
                 </div>

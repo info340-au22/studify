@@ -6,7 +6,7 @@ import EVENT_DATA from '../../data/events.json';
 import { WeekdaySelect } from './WeekdayDiv';
 import ScheduleGrid from './ScheduleGrid';
 
-export default function HomePage(props) {
+export default function SchedulePage(props) {
 
     const [weekdayData, setWeekdayData] = useState(EVENT_DATA);
 
@@ -22,7 +22,7 @@ export default function HomePage(props) {
             <Helmet>
                 <title>Studify | Home</title>
             </Helmet>
-            <main className="container my-schedule pt-lg-0">
+            <main className='container my-schedule pt-lg-0'>
                 <h2>My Schedule</h2>
                 <WeekdaySelect eventData={EVENT_DATA} handleChangeCallback={handleChange} />
                 <ScheduleGrid eventData={EVENT_DATA} />

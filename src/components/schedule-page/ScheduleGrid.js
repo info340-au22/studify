@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { EditDiv } from './EditDiv';
 import { WeekdaySlots } from './WeekdayDiv';
@@ -7,7 +7,7 @@ import { EventDiv } from './EventDiv';
 
 export default function ScheduleGrid(props) {
     return (
-        <section className="my-schedule-grid">
+        <section className='my-schedule-grid'>
             <EditDiv />
             <WeekdaySlots />
             <TimeSlots />

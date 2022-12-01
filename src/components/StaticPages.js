@@ -10,7 +10,7 @@ export function ErrorPage(props) {
                 <span className="error-2">4</span>
             </div>
             <div className="error-msg">
-                <h2 className="pt-0">PAGE NOT FOUND</h2>
+                <h2 className="pt-0">OOPS! PAGE NOT FOUND</h2>
                 <p>Maybe this page got deleted? Is hiding out in quarantine? Never existed in the first place?</p>
             </div>
             <Link className="btn btn-outline-primary" to="/">Return Home</Link>

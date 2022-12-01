@@ -46,6 +46,10 @@ h2 {
   color: #33383b;
 }
 
+.main-nav .active {
+  text-decoration: underline;
+}
+
 .logo {
   height: 2em;
   padding: 0;
@@ -308,7 +312,11 @@ p.footer-links a {
 }
 
 .error-msg h2 {
-  font-size: 28px;
+  font-size: 24px;
+}
+
+.error-msg p {
+  font-size: 16px;
 }
 
 .error, .error-2 {
@@ -316,7 +324,7 @@ p.footer-links a {
 }
 
 .error-404 {
-  font-size: 5em;
+  font-size: 4em;
 }
 
 .error-404 span {
@@ -411,6 +419,10 @@ p.footer-links a {
       float: right;
       margin-top: 10px;
       max-width: 180px;
+  }
+
+  .error-404 {
+    font-size: 5em;
   }
 
   .error-msg h2 {
