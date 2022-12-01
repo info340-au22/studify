@@ -1,7 +1,15 @@
 import React from 'react';
 
 export function EventDiv(props) {
-    const eventData = props.eventData;
+    let eventData = props.eventData;
+
+    const isMobile = props.widthDimension < 992;
+
+    if (isMobile) {
+        eventData = [...eventData].filter(eventObj => {
+            return eventObj.date === props.currentDay;
+        })
+    }
 
     const eventDiv = eventData.map(eventObj => {
         const name = eventObj.name;
@@ -9,13 +17,17 @@ export function EventDiv(props) {
         const date = eventObj.date;
         const time = eventObj.time;
     
-        let element = '';
+        let divElement = '';
     
         if (eventObj.hasOwnProperty('activity')) {
-            element = (
+            divElement = (
                 <div 
-                    key={eventObj.name + date} className={'event ' + name}
-                    style={{gridColumn: date, gridRow: time.timeStart + ' / ' + time.timeEnd}}
+                    key={eventObj.name + date}
+                    className={'event ' + name}
+                    style={{
+                        gridColumn: isMobile ? 'current-day' : date, 
+                        gridRow: time.timeStart + ' / ' + time.timeEnd
+                    }}
                 >
                     <span className='event-title'>{title}</span><br/>
                     <span className='form-check event-todolist'>
@@ -25,16 +37,19 @@ export function EventDiv(props) {
                 </div>
             )
         } else {
-            element = (
+            divElement = (
                 <div 
                     key={eventObj.name + date} className={'event ' + name}
-                    style={{gridColumn: date, gridRow: time.timeStart + ' / ' + time.timeEnd}}
+                    style={{
+                        gridColumn: isMobile ? 'current-day' : date, 
+                        gridRow: time.timeStart + ' / ' + time.timeEnd
+                    }}
                 >
                     <span className='event-title'>{title}</span><br/>
                 </div>
             )
         }
-        return element;
+        return divElement;
     })
     return eventDiv;
 }

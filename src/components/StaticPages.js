@@ -6,7 +6,7 @@ export function ErrorPage(props) {
         <main className="container error-page text-center">
             <div className="error-404">
                 <span className="error">4</span>
-                <span className="far fa-question-circle fa-spin"></span>
+                <span className="fa-regular fa-question-circle fa-spin"></span>
                 <span className="error-2">4</span>
             </div>
             <div className="error-msg">

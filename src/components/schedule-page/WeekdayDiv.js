@@ -1,16 +1,14 @@
 import React from 'react';
 
 const WEEKDAY_SLOTS = [
-    { "class": "mon", "content": "Monday" },
-    { "class": "tue", "content": "Tuesday" },
-    { "class": "wed", "content": "Wednesday" },
-    { "class": "thu", "content": "Thursday" },
-    { "class": "fri", "content": "Friday" },
-    { "class": "sat", "content": "Saturday" },
-    { "class": "sun", "content": "Sunday" }
+    { "className": "mon", "content": "Monday" },
+    { "className": "tue", "content": "Tuesday" },
+    { "className": "wed", "content": "Wednesday" },
+    { "className": "thu", "content": "Thursday" },
+    { "className": "fri", "content": "Friday" },
+    { "className": "sat", "content": "Saturday" },
+    { "className": "sun", "content": "Sunday" }
 ]
-
-const DAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 export function WeekdaySelect(props) {
     const weekdayOption = WEEKDAY_SLOTS.map((weekdayObj) => {
@@ -24,15 +22,13 @@ export function WeekdaySelect(props) {
         )
     })
 
-    let today = DAYS[new Date().getDay()];
-
     return (
         <section className="weekday-select d-lg-none">
             <select 
                 className="form-select-sm mb-3" 
                 aria-label="Weekday select" 
                 onChange={props.handleChangeCallback}
-                defaultValue={today}
+                defaultValue={props.liveCurrentDay}
             >
                 {weekdayOption}
             </select>
@@ -41,12 +37,32 @@ export function WeekdaySelect(props) {
 }
 
 export function WeekdaySlots(props) {
-    const weekdayDiv = WEEKDAY_SLOTS.map(weekdayObj => {
+    const isMobile = props.widthDimension < 992;
+
+    const mobileWeekdayDiv = (
+        <div 
+            key={props.currentDay} 
+            className={'weekday ' + props.currentDay}
+        >  
+            {props.currentDay.charAt(0).toUpperCase() + props.currentDay.slice(1)}
+        </div>
+    )
+
+    const desktopWeekdayDiv = WEEKDAY_SLOTS.map(weekdayObj => {
         return (
-            <div key={weekdayObj.class} className={'weekday ' + weekdayObj.class}>  
+            <div 
+                key={weekdayObj.content} 
+                className={'weekday ' + weekdayObj.className}
+            >  
                 {weekdayObj.content}
             </div>
         )
     })
-    return weekdayDiv
+
+    return (
+        <>
+            {isMobile && mobileWeekdayDiv}
+            {!isMobile && desktopWeekdayDiv}
+        </>
+    )
 } 

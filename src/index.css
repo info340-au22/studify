@@ -117,7 +117,7 @@ span.event-title {
 .my-schedule-grid {
   display: grid;
   gap: .5em;
-  grid-template-columns: 4em [monday] 1fr;
+  grid-template-columns: 4em [current-day] 1fr;
   grid-template-rows:
       [weekdays] auto
       [time-0600] 1fr
@@ -158,15 +158,6 @@ span.event-title {
       [time-2330] 1fr;
   z-index: 500;
 }
-
-.my-schedule-grid :is(
-  .tue, .wed, .thu, .fri, .sat, .sun,
-  .info310, .info370B, .info340, .study,
-  .workB, .game, .tennis, .mass, .movie
-  ) {
-      display: none;
-}
-
 
 .weekday {
   display: grid;
@@ -371,17 +362,6 @@ p.footer-links a {
         [friday-end saturday-start] 1fr
         [saturday-end sunday-start] 1fr
         [sunday-end];
-  }
-
-  .my-schedule-grid :is(.tue, .wed, .thu, .fri, .sat, .sun) {
-      display: grid;
-  }
-
-  .my-schedule-grid :is(
-      .info310, .info370B, .info340, .study,
-      .workB, .game, .tennis, .mass, .movie
-      ) {
-          display: block;
   }
 
   .event:hover {
