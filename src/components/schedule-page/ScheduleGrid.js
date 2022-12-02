@@ -7,7 +7,6 @@ import { EventDiv } from './EventDiv';
 
 
 export default function ScheduleGrid(props) {
-
     const [widthDimension, setWidthDimension] = useState(window.innerWidth);
  
     useEffect(() => {
@@ -18,12 +17,14 @@ export default function ScheduleGrid(props) {
         }
     }, [window.innerWidth])
 
+    const isMobile = widthDimension < 992;
+
     return (
         <section className='my-schedule-grid'>
             <EditDiv />
-            <WeekdaySlots widthDimension={widthDimension} currentDay={props.currentDay} />
+            <WeekdaySlots isMobile={isMobile} currentDay={props.currentDay} />
             <TimeSlots />
-            <EventDiv eventData={props.eventData} widthDimension={widthDimension} currentDay={props.currentDay} />
+            <EventDiv eventData={props.eventData} isMobile={isMobile} currentDay={props.currentDay} />
         </section>
     )
 }

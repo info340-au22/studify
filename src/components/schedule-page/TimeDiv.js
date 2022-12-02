@@ -40,7 +40,7 @@ const TIME_SLOTS = [
 ]
 
 export function TimeSlots(props) {
-    const timeDiv = TIME_SLOTS.map(timeObj => {
+    const timeDiv = TIME_SLOTS.map((timeObj) => {
         const time = timeObj.time;
         if (timeObj.hasOwnProperty('text')) {
             return (

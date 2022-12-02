@@ -23,10 +23,10 @@ export function WeekdaySelect(props) {
     })
 
     return (
-        <section className="weekday-select d-lg-none">
+        <section className='weekday-select d-lg-none'>
             <select 
-                className="form-select-sm mb-3" 
-                aria-label="Weekday select" 
+                className='form-select-sm mb-3' 
+                aria-label='Weekday select' 
                 onChange={props.handleChangeCallback}
                 defaultValue={props.liveCurrentDay}
             >
@@ -37,18 +37,19 @@ export function WeekdaySelect(props) {
 }
 
 export function WeekdaySlots(props) {
-    const isMobile = props.widthDimension < 992;
+    const isMobile = props.isMobile;
+    const currentDay = props.currentDay;
 
     const mobileWeekdayDiv = (
         <div 
-            key={props.currentDay} 
-            className={'weekday ' + props.currentDay}
+            key={currentDay} 
+            className={'weekday ' + currentDay}
         >  
-            {props.currentDay.charAt(0).toUpperCase() + props.currentDay.slice(1)}
+            {currentDay.charAt(0).toUpperCase() + currentDay.slice(1)}
         </div>
     )
 
-    const desktopWeekdayDiv = WEEKDAY_SLOTS.map(weekdayObj => {
+    const desktopWeekdayDiv = WEEKDAY_SLOTS.map((weekdayObj) => {
         return (
             <div 
                 key={weekdayObj.content} 

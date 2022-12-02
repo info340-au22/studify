@@ -1,22 +1,22 @@
 import React from 'react';
 
 export function EventDiv(props) {
-    let eventData = props.eventData;
-
-    const isMobile = props.widthDimension < 992;
+    const isMobile = props.isMobile;
+    const currentDay = props.currentDay;
+    const eventData = props.eventData;
+    let mobileEventData = [];
 
     if (isMobile) {
-        eventData = [...eventData].filter(eventObj => {
-            return eventObj.date === props.currentDay;
+        mobileEventData = eventData.filter((eventObj) => {
+            return eventObj.date === currentDay;
         })
     }
 
-    const eventDiv = eventData.map(eventObj => {
+    const eventDiv = (isMobile ? mobileEventData : eventData).map((eventObj) => {
         const name = eventObj.name;
         const title = eventObj.title;
         const date = eventObj.date;
         const time = eventObj.time;
-    
         let divElement = '';
     
         if (eventObj.hasOwnProperty('activity')) {

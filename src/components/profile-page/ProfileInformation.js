@@ -1,12 +1,11 @@
 import React from 'react';
 
 export function ProfileInformation(props) {
-
     const currentUser = props.currentUser;
 
     const displayedUserInfo = ['name', 'username', 'email', 'phone', 'school'];
     
-    const userInfoDiv = displayedUserInfo.map(userInfo => {
+    const userInfoDiv = displayedUserInfo.map((userInfo) => {
         let userContent = '';
         let userContentInfo = '';
         
