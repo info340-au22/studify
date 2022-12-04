@@ -8,6 +8,7 @@ import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
 import { CreateGroups } from './groups-page/CreateGroups';
 import ProfilePage from './profile-page/ProfilePage';
+import { Mission, Creators, Contact } from './About';
 import Footer from './Footer';
 import * as Static from './StaticPages'
 
@@ -46,6 +47,10 @@ export default function App(props) {
         </Route>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />
+        <Route path='/missions' element={ <Mission/>}>
+          <Route path='/creators' element={ <Creators/> }/>
+          <Route path='/contact' element={ <Contact/> }/>
+        </Route> 
       </Routes>
       <Footer />
     </>

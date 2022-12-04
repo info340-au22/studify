@@ -2,7 +2,7 @@ import React from "react";
 
 export function Mission(props) {
     return (
-        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Mission</a>
+        <li><a className="dropdown-item">Mission</a>
             <h2>Mission</h2>
                 <h4><em>Studify</em> is not simply a website but also a place for you to study, create your own study group.</h4>
                     <p><em>Studify's</em> mission is to make sure you have the perfect experience, and to make that happen we've included a few features 
@@ -17,7 +17,7 @@ export function Mission(props) {
 
 export function Creators(props) {
     return (
-        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Creators</a>
+        <li><a className="dropdown-item">Creators</a>
             <h2>Behind the scence of <em>Studify</em></h2>
                 <h4>Minh Mai</h4>
                     <p>Minh is a third-year student at the University of Washington studying Informatics. Minh is very interested in learning about Software Development 
@@ -33,7 +33,7 @@ export function Creators(props) {
 
 export function Contact(props) {
     return(
-        <li><a className="dropdown-item" href="https://www.youtube.com/results?search_query=never+gonna+give+you+up">Contact</a>
+        <li><a className="dropdown-item">Contact</a>
             <h2>Contact Us</h2>
                 <p>Let us know your experience</p>
         </li>

@@ -11,9 +11,9 @@ function CreateNewGroup(props) {
         e.preventDefault();
         const group = {groupName, groupDescription, groupPublicity};
         setIsPending(true);
-        fetch('http://localhost:3000/group', {
+        fetch('http://localhost:3000/groups', {
             method: 'POST',
-            headers: { "Content-type": "application/json" },
+            headers: { "Content-type": "groups.json" },
             body: JSON.stringify(group)
         }).then(() => {
             console.log('New group added');
