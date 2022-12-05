@@ -205,6 +205,93 @@ span.event-title {
 
 /* MY PROFILE */
 
+/* CREATE GROUP FEATURE */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: rgb(106, 189, 210);
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+.create button {
+  background-color: rgb(106, 203, 210);
+  color: #292c2f;
+  border: 0;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/*Mision page*/
+.mission-div {
+  text-align:center;
+}
+
+.tag-for-mission {
+  margin-bottom: 40px;
+}
+
+.mission-line {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.mission-normal-text {
+  margin-top: 20px;
+}
+
+/*Creator page*/
+.creator-div {
+  text-align: center;
+}
+
+.creator h2 {
+  margin-bottom: 40px;
+}
+
+.creator-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.h4-creator-tag {
+  font-family: "Gill Sans", sans-serif;
+}
+
+.creator-text-div {
+  width: 400px;
+  border: 5px solid rgb(106, 255, 208);
+  padding: 50px;
+  margin: 20px;
+}
+
+.creator-normal-text {
+  margin-top: 20px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/*Contact page*/
+
 /* FOOTER */
 
 footer {
@@ -331,7 +418,6 @@ p.footer-links a {
       padding: 1em;       
   }
 
-
   .my-schedule-grid {
       display: grid;
       gap: .5em .8em;
@@ -367,6 +453,10 @@ p.footer-links a {
 
   .my-profile form {
       margin: auto 10em;
+  }
+
+  .creator-normal-text {
+    font-size: 20px;
   }
 
   footer {

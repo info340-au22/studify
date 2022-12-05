@@ -6,6 +6,8 @@ import SchedulePage from './schedule-page/SchedulePage';
 import GroupsPage from './groups-page/GroupsPage';
 import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
+import { CreateGroups } from './groups-page/CreateGroups';
+import {Mission, Creators, Contact} from './About';
 import ProfilePage from './profile-page/ProfilePage';
 import Footer from './Footer';
 import * as Static from './StaticPages';
@@ -44,6 +46,9 @@ export default function App(props) {
           <Route path='my-groups' element={ <MyGroups groupData={searchGroupData} /> } />
           <Route path='join-groups' element={ <JoinGroups groupData={searchGroupData} /> } />
         </Route>
+        <Route path='/story' element={ <Mission/> }/>
+        <Route path='/team' element={ <Creators/> }/>
+        <Route path='/contact-us' element={ <Contact/> }/>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />
       </Routes>

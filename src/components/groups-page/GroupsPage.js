@@ -39,6 +39,9 @@ function GroupsNavBar(props) {
             <Nav.Item>
                 <NavLink className='nav-link' to='join-groups'>Join Groups</NavLink>
             </Nav.Item>
+            <Nav.Item>
+                <NavLink className="nav-link" to="create-groups">Create Groups</NavLink>
+            </Nav.Item>
         </Nav>
     )
 }
