@@ -484,3 +484,10 @@ p.footer-links a {
   border-radius: 15px;
   cursor: pointer;
 }
+
+/*About page*/
+h2.tag-for-about {
+  margin: 20px;
+  text-align: center;
+}
+

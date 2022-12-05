@@ -7,8 +7,8 @@ import GroupsPage from './groups-page/GroupsPage';
 import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
 import { CreateGroups } from './groups-page/CreateGroups';
+import {Mission, Creators, Contact} from './About';
 import ProfilePage from './profile-page/ProfilePage';
-import { Mission, Creators, Contact } from './About';
 import Footer from './Footer';
 import * as Static from './StaticPages'
 
@@ -45,12 +45,11 @@ export default function App(props) {
           <Route path='/groups/join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
           <Route path='/groups/create-groups' element={ <CreateGroups groupData={filteredGroupData} /> } />
         </Route>
+        <Route path='/mission' element={ <Mission/> }/>
+        <Route path='/creators' element={ <Creators/> }/>
+        <Route path='/contact-us' element={ <Contact/> }/>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />
-        <Route path='/missions' element={ <Mission/>}>
-          <Route path='/creators' element={ <Creators/> }/>
-          <Route path='/contact' element={ <Contact/> }/>
-        </Route> 
       </Routes>
       <Footer />
     </>
