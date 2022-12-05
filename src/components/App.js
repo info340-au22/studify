@@ -45,8 +45,8 @@ export default function App(props) {
           <Route path='/groups/join-groups' element={ <JoinGroups groupData={filteredGroupData} /> } />
           <Route path='/groups/create-groups' element={ <CreateGroups groupData={filteredGroupData} /> } />
         </Route>
-        <Route path='/mission' element={ <Mission/> }/>
-        <Route path='/creators' element={ <Creators/> }/>
+        <Route path='/story' element={ <Mission/> }/>
+        <Route path='/team' element={ <Creators/> }/>
         <Route path='/contact-us' element={ <Contact/> }/>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />

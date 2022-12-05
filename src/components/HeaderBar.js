@@ -41,8 +41,8 @@ function NavBar(props) {
                     <NavLink className="nav-link" to="/profile" style={activeFunction}>Profile</NavLink>
                 </Nav.Item>
                 <NavDropdown title="About">
-                    <NavDropdown.Item><Link to="/mission">The Story</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/creators">The Team</Link></NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/story">The Story</Link></NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/team">The Team</Link></NavDropdown.Item>
                     <NavDropdown.Divider/>
                     <NavDropdown.Item><Link to="/contact-us">Contact Us</Link></NavDropdown.Item>
                 </NavDropdown>
