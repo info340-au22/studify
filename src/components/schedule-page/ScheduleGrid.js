@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { EditDiv } from './EditDiv';
-import { WeekdaySlots } from './WeekdayDiv';
-import { TimeSlots } from './TimeDiv';
-import { EventDiv } from './EventDiv';
+import NewCourseForm from './NewCourseForm';
+import WeekdayColumnNames from './WeekdayColumnNames';
+import TimeRowNames from './TimeRowNames';
+import EventBlocks from './EventBlocks';
 
 
 export default function ScheduleGrid(props) {
@@ -21,10 +21,10 @@ export default function ScheduleGrid(props) {
 
     return (
         <section className='my-schedule-grid'>
-            <EditDiv />
-            <WeekdaySlots isMobile={isMobile} currentDay={props.currentDay} />
-            <TimeSlots />
-            <EventDiv eventData={props.eventData} isMobile={isMobile} currentDay={props.currentDay} />
+            <NewCourseForm />
+            <WeekdayColumnNames isMobile={isMobile} currentDay={props.currentDay} weekdayStrings={props.weekdayStrings} />
+            <TimeRowNames />
+            <EventBlocks eventData={props.eventData} isMobile={isMobile} currentDay={props.currentDay} />
         </section>
     )
 }

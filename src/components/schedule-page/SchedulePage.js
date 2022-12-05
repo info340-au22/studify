@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
-import EVENT_DATA from '../../data/events.json';
-
-import { WeekdaySelect } from './WeekdayDiv';
+import WeekdaySelectForm from './WeekdaySelectForm';
 import ScheduleGrid from './ScheduleGrid';
 
-const DAYS_OF_THE_WEEK = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+import COURSE_DATA from '../../data/courses.json';
+
+const DAYS_OF_THE_WEEK = [
+    "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
+];
 
 export default function SchedulePage(props) {
 
@@ -21,12 +23,20 @@ export default function SchedulePage(props) {
     return (
         <>
             <Helmet>
-                <title>Studify | Home</title>
+                <title>Studify | Schedule</title>
             </Helmet>
             <main className='container my-schedule pt-lg-0'>
                 <h2>My Schedule</h2>
-                <WeekdaySelect eventData={EVENT_DATA} handleChangeCallback={handleChange} liveCurrentDay={liveCurrentDay} />
-                <ScheduleGrid eventData={EVENT_DATA} currentDay={currentDay} />
+                <WeekdaySelectForm 
+                    weekdayStrings={DAYS_OF_THE_WEEK} 
+                    handleChangeCallback={handleChange} 
+                    liveCurrentDay={liveCurrentDay} 
+                />
+                <ScheduleGrid 
+                    eventData={COURSE_DATA} 
+                    weekdayStrings={DAYS_OF_THE_WEEK}
+                    currentDay={currentDay} 
+                />
             </main>
         </>
     )
