@@ -29,7 +29,7 @@ export function Mission(props) {
 export function Creators(props) {
     return (
         <main className="creator container">
-            <h2 className="tag-for-creator">Behind the scence of <em>Studify</em></h2>
+            <h2>Behind the scence of <em>Studify</em></h2>
             <div className="creator-div">       
                 <div className="creator-text-div">
                     <h4 className="h4-creator-tag">Minh Mai</h4>
