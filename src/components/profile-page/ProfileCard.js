@@ -29,34 +29,43 @@ const SOCIAL_MEDIA = [
 ]
 
 export function ProfileCard(props) {
-
     const currentUser = props.currentUser;
 
-    const socialMediaLink = SOCIAL_MEDIA.map(socialMediaObj => {
+    const socialMediaLink = SOCIAL_MEDIA.map((socialMediaObj) => {
         const platform = socialMediaObj.platform;
         const fa = socialMediaObj['font-awesome'];
         const color = socialMediaObj.color;
 
         const linkElement = (
-            <a key={platform} className="social-media" href={currentUser['social-media'][platform]} target="_blank" style={{color: color}}>
+            <a 
+                key={platform}
+                className='social-media'
+                href={currentUser['social-media'][platform]}
+                target='_blank' 
+                style={{color: color}}
+            >
                 <span className={fa}></span>
             </a>
         )
-        return linkElement
+        return linkElement;
     })
 
     return (
-        <div className="col-md-6 mb-3">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex flex-column align-items-center text-center">
-                        <img src={currentUser.image} alt={currentUser.name + " Avatar"} className="rounded-circle" width="150"/>
-                        <div className="mt-3">
+        <div className='col-md-6 mb-3'>
+            <div className='card'>
+                <div className='card-body'>
+                    <div className='d-flex flex-column align-items-center text-center'>
+                        <img 
+                            src={currentUser.image} 
+                            alt={currentUser.name + ' Avatar'} 
+                            className='rounded-circle' 
+                            width='150'
+                        />
+                        <div className='mt-3'>
                             <h4>{currentUser.name}</h4>
-                                <p className="text-secondary mb-1">{currentUser.job}</p>
-                                <p className="text-muted font-size-sm">{currentUser.location}</p>
-                
-                            <div className="d-flex justify-content-between">
+                                <p className='text-secondary mb-1'>{currentUser.job}</p>
+                                <p className='text-muted font-size-sm'>{currentUser.location}</p>
+                            <div className='d-flex justify-content-between'>
                                 {socialMediaLink}
                             </div>
                         </div>

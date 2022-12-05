@@ -1,0 +1,92 @@
+[
+    { 
+        "name": "info340",
+        "title": "INFO 340", 
+        "date": "tuesday",
+        "time": {
+            "timeStart": "time-1330",
+            "timeEnd": "time-1530"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info340",
+        "title": "INFO 340", 
+        "date": "thursday",
+        "time": {
+            "timeStart": "time-1330",
+            "timeEnd": "time-1530"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info340ba",
+        "title": "INFO 340 BA", 
+        "date": "wednesday",
+        "time": {
+            "timeStart": "time-1330",
+            "timeEnd": "time-1430"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info370",
+        "title": "INFO 370", 
+        "date": "monday",
+        "time": {
+            "timeStart": "time-1730",
+            "timeEnd": "time-1930"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info370",
+        "title": "INFO 370", 
+        "date": "wednesday",
+        "time": {
+            "timeStart": "time-1730",
+            "timeEnd": "time-1930"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info370ab",
+        "title": "INFO 370 AB", 
+        "date": "tuesday",
+        "time": {
+            "timeStart": "time-1730",
+            "timeEnd": "time-1830"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info330",
+        "title": "INFO 330", 
+        "date": "tuesday",
+        "time": {
+            "timeStart": "time-0830",
+            "timeEnd": "time-1030"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info330",
+        "title": "INFO 330", 
+        "date": "thursday",
+        "time": {
+            "timeStart": "time-0830",
+            "timeEnd": "time-1030"
+        },
+        "activity": "Problem Set"
+    },
+    { 
+        "name": "info330ab",
+        "title": "INFO 330 AB", 
+        "date": "wednesday",
+        "time": {
+            "timeStart": "time-0830",
+            "timeEnd": "time-0930"
+        },
+        "activity": "Problem Set"
+    }
+]
