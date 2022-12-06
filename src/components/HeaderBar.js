@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 export default function HeaderBar(props) {
     return (
@@ -36,10 +36,10 @@ function NavBar(props) {
                     <NavLink className='nav-link' to='/profile'>Profile</NavLink>
                 </Nav.Item>
                 <NavDropdown title="About">
-                    <NavDropdown.Item><Link to="/story">The Story</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/team">The Team</Link></NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/story">The Story</NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/team">The Team</NavDropdown.Item>
                     <NavDropdown.Divider/>
-                    <NavDropdown.Item><Link to="/contact-us">Contact Us</Link></NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/contact-us">Contact Us</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
         </Navbar.Collapse>

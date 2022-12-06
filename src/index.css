@@ -202,7 +202,9 @@ span.event-title {
   font-size: 18px;
 }
 
-
+.dropdown-item.active {
+  background-color: white;
+}
 /* MY PROFILE */
 
 /* CREATE GROUP FEATURE */
@@ -512,4 +514,7 @@ p.footer-links a {
       text-decoration: underline;
   }
 
+  .dropdown-item:hover {
+    background-color: white;
+  }
 }
