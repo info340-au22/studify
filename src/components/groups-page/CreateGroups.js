@@ -22,7 +22,7 @@ function CreateNewGroup(props) {
     }
 
     return (
-        <div className="create">
+        <div className="create-group">
             <h2>Create new group</h2>
             <form onSubmit={handleSubmit}>
                 <label>Group name:</label>
