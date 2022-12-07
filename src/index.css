@@ -7,7 +7,7 @@
   
 } */
 
-#root {
+.studify-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,6 +38,15 @@ h2 {
       rgba(106, 189, 210, 1) 100%);
 }
 
+.main-nav .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .navbar-brand img {
+  margin-right: 0;
+}
+
 .main-nav .nav-item {
   margin-left: 10px;
 }
@@ -52,6 +61,7 @@ h2 {
 
 .logo {
   height: 2em;
+  object-fit: cover;
   padding: 0;
 }
 
@@ -88,7 +98,6 @@ span.event-title {
 
 .weekday,
 .time {
-  font-weight: bold;
   font-size: 0.8em;
 }
 
@@ -401,9 +410,9 @@ p.footer-links a {
 
 @media (min-width: 992px) {
 
-  h1 {
+  .main-nav h1 {
       font-weight: bold;
-      font-size: 1.5em;       
+      font-size: 30px;       
   }
 
   h2 {
@@ -412,6 +421,10 @@ p.footer-links a {
 
   .main-nav div.container-fluid {
       width: 90%;
+  }
+
+  .main-nav .navbar-brand img {
+    margin-right: 10px;
   }
 
   .my-schedule {

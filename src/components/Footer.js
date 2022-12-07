@@ -32,9 +32,9 @@ function InformationAndCopyRight(props) {
     return (
         <div className='footer-left'>
             <p className='footer-links'>
-                <a className='link-1' href='#'>About</a>
-                <a href='#'>Contact</a>
-                <a href='#'>Feedback</a>
+                <a className='link-1' href='#'>The Story</a>
+                <a href='#'>The Team</a>
+                <a href='#'>Contact Us</a>
             </p>
             <p className='footer-copyright'>
                 &copy; 2022 Minh Mai &#x26; Luong Quan. Made in &#127783; Seattle.

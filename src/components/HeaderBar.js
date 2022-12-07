@@ -8,11 +8,9 @@ export default function HeaderBar(props) {
             <Navbar className='main-nav' sticky='top' expand='lg'>
                 <Container fluid>
                     <Navbar.Toggle />
-                    <Navbar.Brand href='https://studify-883c3.web.app/'>
+                    <Navbar.Brand href='https://studify-883c3.web.app/' className='m-0'>
                         <img className='logo' src='../img/studify-icon.png' alt='Studify logo'/>
-                    </Navbar.Brand>
-                    <Navbar.Brand className='d-none d-lg-block mb-0 h1'>
-                        <h1 className='title'>Studify</h1>
+                        <h1 className='d-none d-lg-block mb-0 h1'>Studify</h1>
                     </Navbar.Brand>
                     <SignOutButton />
                     <NavBar />
@@ -24,7 +22,7 @@ export default function HeaderBar(props) {
 
 function NavBar(props) {
     return (
-            <Navbar.Collapse className='me-auto'>
+        <Navbar.Collapse className='me-auto'>
             <Nav className='ms-auto mb-2 mb-lg-0'>
                 <Nav.Item>
                     <NavLink className='nav-link' to='/'>Schedule</NavLink>
@@ -36,10 +34,10 @@ function NavBar(props) {
                     <NavLink className='nav-link' to='/profile'>Profile</NavLink>
                 </Nav.Item>
                 <NavDropdown title="About">
-                    <NavDropdown.Item><Link to="/story">The Story</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/team">The Team</Link></NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/story">The Story</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/team">The Team</NavDropdown.Item>
                     <NavDropdown.Divider/>
-                    <NavDropdown.Item><Link to="/contact-us">Contact Us</Link></NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/contact-us">Contact Us</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
         </Navbar.Collapse>

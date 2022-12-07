@@ -35,7 +35,7 @@ export default function App(props) {
   }
 
   return (
-    <>
+    <div className='studify-app'>
       <HeaderBar />
       <Routes>
         <Route index element={ <SchedulePage /> } />
@@ -53,6 +53,6 @@ export default function App(props) {
         <Route path='*' element={ <Static.ErrorPage />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
