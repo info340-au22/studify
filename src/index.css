@@ -304,6 +304,26 @@ div.create-group {
 }
 
 /*Contact page*/
+.firstbox{
+  flex: 1;
+  background-color : white;
+  margin-left: 100px;
+  margin-top :100px;
+  height : 500px;
+  width : 40%;
+  font-weight: bold;
+  text-decoration: solid;
+  font-family :'Times New Roman', Times, serif;
+  font-size :large;
+  padding-left: 30px;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+
+.contact-input{
+  width : 300px;
+  height :20px;
+}
 
 /* FOOTER */
 
