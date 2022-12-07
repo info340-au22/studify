@@ -47,12 +47,3 @@ export function Creators(props) {
         </main>
     );
 }
-
-export function Contact(props) {
-    return(
-        <main className="contact-div">
-            <h2 className="tag-for-contact">Contact Us</h2>
-                <p className="contact-normal-text">Let us know your experience</p>
-        </main>
-    );
-}
