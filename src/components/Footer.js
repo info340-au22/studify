@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer(props) {
     return (
@@ -32,9 +33,9 @@ function InformationAndCopyRight(props) {
     return (
         <div className='footer-left'>
             <p className='footer-links'>
-                <a className='link-1' href='#'>The Story</a>
-                <a href='#'>The Team</a>
-                <a href='#'>Contact Us</a>
+                <Link className='link-1' to='/about'>About</Link>
+                <Link to='/team-members'>Team Members</Link>
+                <Link to='/contact-us'>Contact Us</Link>
             </p>
             <p className='footer-copyright'>
                 &copy; 2022 Minh Mai &#x26; Luong Quan. Made in &#127783; Seattle.

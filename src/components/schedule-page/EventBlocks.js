@@ -1,4 +1,5 @@
 import React from 'react';
+import { getDatabase, ref } from 'firebase/database';
 
 export default function EventBlocks(props) {
     const isMobile = props.isMobile;
@@ -11,6 +12,9 @@ export default function EventBlocks(props) {
             return courseObj.date === currentDay;
         })
     }
+
+    const db = getDatabase();
+    console.log(db)
 
     const courseBlocks = (isMobile ? mobileEventData : eventData).map((courseObj) => {
         const name = courseObj.name;

@@ -44,7 +44,7 @@ h2 {
 }
 
 .main-nav .navbar-brand img {
-  margin-right: 0;
+  margin-right: 15px;
 }
 
 .main-nav .nav-item {
@@ -55,8 +55,13 @@ h2 {
   color: #33383b;
 }
 
-.main-nav .active {
+.main-nav a.nav-link.active {
   text-decoration: underline;
+}
+
+.main-nav a.dropdown-item.active {
+  text-decoration: underline;
+  background-color: white;
 }
 
 .logo {
@@ -211,9 +216,6 @@ span.event-title {
   font-size: 18px;
 }
 
-.dropdown-item.active {
-  background-color: white;
-}
 /* MY PROFILE */
 
 /* CREATE GROUP FEATURE */
@@ -385,6 +387,7 @@ p.footer-links a {
 
 .error-msg h2 {
   font-size: 24px;
+  text-transform: uppercase;
 }
 
 .error-msg p {
@@ -423,10 +426,6 @@ p.footer-links a {
 
   .main-nav div.container-fluid {
       width: 90%;
-  }
-
-  .main-nav .navbar-brand img {
-    margin-right: 10px;
   }
 
   .my-schedule {
@@ -527,7 +526,7 @@ p.footer-links a {
       text-decoration: underline;
   }
 
-  .dropdown-item:hover {
+  .dropdown-item:focus {
     background-color: white;
   }
 }

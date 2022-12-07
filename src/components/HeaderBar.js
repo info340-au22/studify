@@ -33,9 +33,9 @@ function NavBar(props) {
                 <Nav.Item>
                     <NavLink className='nav-link' to='/profile'>Profile</NavLink>
                 </Nav.Item>
-                <NavDropdown title="About">
-                    <NavDropdown.Item as={NavLink} to="/story">The Story</NavDropdown.Item>
-                    <NavDropdown.Item as={NavLink} to="/team">The Team</NavDropdown.Item>
+                <NavDropdown title="Info">
+                    <NavDropdown.Item as={NavLink} to="/about">About</NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/team-members">Team Members</NavDropdown.Item>
                     <NavDropdown.Divider/>
                     <NavDropdown.Item as={NavLink} to="/contact-us">Contact Us</NavDropdown.Item>
                 </NavDropdown>
