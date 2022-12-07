@@ -10,9 +10,9 @@ export default function ProfilePage(props) {
             <Helmet>
                 <title>Studify | Profile</title>
             </Helmet>
-            <main className="container my-profile">
+            <main className='container my-profile'>
                 <h2>Profile</h2>
-                <div className="row gutters-sm">
+                <div className='row gutters-sm'>
                     <ProfileCard currentUser={props.currentUser} />
                     <ProfileInformation currentUser={props.currentUser} />
                 </div>
