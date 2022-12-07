@@ -45,6 +45,7 @@ export default function App(props) {
           <Route index element={ <MyGroups groupData={searchGroupData} /> } />
           <Route path='my-groups' element={ <MyGroups groupData={searchGroupData} /> } />
           <Route path='join-groups' element={ <JoinGroups groupData={searchGroupData} /> } />
+          <Route path='create-groups' element={ <CreateGroups/>} />
         </Route>
         <Route path='/story' element={ <Mission/> }/>
         <Route path='/team' element={ <Creators/> }/>
