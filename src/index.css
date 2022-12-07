@@ -304,20 +304,16 @@ div.create-group {
 }
 
 /*Contact page*/
-.firstbox{
+.contact-box{
   max-width: 400px;
-  margin: 0 auto;
   text-align: center;
   width: 400px;
   border: 5px solid rgb(106, 255, 208);
   padding: 50px;
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin: auto;
 }
 
-.contact-button button{
+.share-button {
   background-color: rgb(106, 203, 210);
   color: #292c2f;
   border: 0;
