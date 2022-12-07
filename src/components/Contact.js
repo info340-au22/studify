@@ -9,8 +9,11 @@ export function Contact(props) {
         <main className="contact-div">
             <h2 className="tag-for-contact">Contact Us</h2>
                 <div className="firstbox">
-                    <br /><br />
-                    First name : <br /><br />
+                    <br />
+                    <h5>Hey, Studifier!!!</h5>
+                    <h5>Let's us know your experience!!!</h5>
+                    <br />
+                    First name<br /><br />
                     <input className="contact-input"
                         name="firstname"
                         type="text"
@@ -20,7 +23,7 @@ export function Contact(props) {
 
                     <br /><br />
 
-                    Last name: <br /><br />
+                    Last name<br /><br />
                     <input className="contact-input"
                         name="lastname"
                         type="text"
@@ -30,7 +33,7 @@ export function Contact(props) {
 
                     <br /><br />
 
-                    Email: <br /><br />
+                    Email<br /><br />
                     <input className="contact-input"
                         name="email"
                         type="email"
@@ -40,7 +43,7 @@ export function Contact(props) {
 
                     <br /><br />
 
-                    Review feedback: <br /><br />
+                    Review feedback<br /><br />
                     <input className="contact-input"
                         name="feedback"
                         type="text"
@@ -50,7 +53,7 @@ export function Contact(props) {
 
                     <br /><br />
 
-                    <button onClick={e=>{
+                    <button clasasName="contact-button" onClick={e=>{
                     if(firstname==='' || lastname==='' || feedback==='')
                         alert("FILL THE FIELDS")
                     else if(firstname.length>10 || lastname.length>10 || feedback.length>40)
