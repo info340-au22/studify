@@ -219,10 +219,13 @@ span.event-title {
 /* MY PROFILE */
 
 /* CREATE GROUP FEATURE */
-div.create-group {
+.create-group {
   max-width: 400px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
+  width: 400px;
+  border: 5px solid rgb(106, 255, 208);
+  padding: 70px;
 }
 
 .create-group label {
@@ -230,13 +233,13 @@ div.create-group {
   display: block;
 }
 
-.create-group h2 {
-  font-size: 20px;
+.create-group h1 {
+  font-size: 30px;
   color: rgb(106, 189, 210);
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.create-group input, .create-group textarea, .create-group select {
+.create-group input, .create-group textarea {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -251,6 +254,7 @@ div.create-group {
   padding: 10px;
   border-radius: 15px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /*Mision page*/
