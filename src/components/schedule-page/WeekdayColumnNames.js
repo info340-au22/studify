@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function WeekdayColumnNames(props) {
     const isMobile = props.isMobile;
-    const currentDay = props.currentDay;
+    const selectedDate = props.selectedDate;
     const weekdayStrings = props.weekdayStrings;
 
     const mobileWeekdayColumn = (
-        <div key={currentDay} className={'weekday ' + currentDay}>  
-            {currentDay.charAt(0).toUpperCase() + currentDay.slice(1)}
+        <div key={selectedDate} className={'weekday ' + selectedDate}>  
+            {selectedDate.charAt(0).toUpperCase() + selectedDate.slice(1)}
         </div>
     )
 

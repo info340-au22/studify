@@ -2,6 +2,9 @@ import React from 'react';
 
 export default function WeekdaySelectForm(props) {
     const weekdayStrings = props.weekdayStrings;
+    const handleChangeCallback = props.handleChangeCallback;
+    const liveCurrentDay = props.liveCurrentDay
+
     const weekdayOptions = weekdayStrings.map((weekdayStr) => {
         return (
             <option key={weekdayStr} value={weekdayStr}>
@@ -14,8 +17,8 @@ export default function WeekdaySelectForm(props) {
             <select 
                 className='form-select-sm mb-3' 
                 aria-label='Weekday select' 
-                onChange={props.handleChangeCallback}
-                defaultValue={props.liveCurrentDay}
+                onChange={handleChangeCallback}
+                defaultValue={liveCurrentDay}
             >
                 {weekdayOptions}
             </select>

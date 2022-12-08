@@ -1,60 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import { getDatabase, onValue, ref, set as setDatabase, push as pushDatabase } from 'firebase/database';
+import React from 'react';
 
 export default function CourseBlocks(props) {
-    const [courseData, setCourseData] = useState(props.eventData);
-
-    // useEffect(() => {
-
-    //     const db = getDatabase();
-    //     const courseRef = ref(db, 'courseData');
-
-    //     onValue(courseRef, (snapshot) => {
-    //         const changedValue = snapshot.val();
-    //         console.log(changedValue)
-            
-    //         const objKeys = Object.keys(changedValue)
-    //         const courseArray = objKeys.map((keyString) => {
-    //             const courseObj = changedValue[keyString];
-    //             console.log(courseObj)
-    //             return courseObj
-    //         })
-    //         console.log(courseArray)
-    //         setCourseData(courseArray)
-    //     })
-
-
-    // }, [])
-
+    const allCoursesData = props.allCoursesData;
     const isMobile = props.isMobile;
-    const currentDay = props.currentDay;
-    let mobileCourseData = [];
+    const selectedDate = props.selectedDate;
+    let mobileAllCoursesData = [];
 
     if (isMobile) {
-        mobileCourseData = courseData.filter((courseObj) => {
-            return courseObj.date === currentDay;
+        mobileAllCoursesData = allCoursesData.filter((courseObj) => {
+            return courseObj.date === selectedDate;
         })
     }
 
-    const courseBlocks = (isMobile ? mobileCourseData : courseData).map((courseObj) => {
-        const { name, title, date, time, activity } = courseObj;
-        // const { activity, date, name, time, title } = courseObj;
+    const courseBlocks = (isMobile ? mobileAllCoursesData : allCoursesData).map((courseObj) => {
+        const { date, key, subject, time } = courseObj;
+        
+        const timeRow = (timeString) => {            
+            return 'time-'.concat(timeString.replace(':', ''));
+        }
+
         return (
             <div 
-                key={courseObj.name + ' ' + date}
-                className={'event ' + name}
+                key={key}
+                className={'event'}
                 style={{
                     gridColumn: isMobile ? 'current-day' : date, 
-                    gridRow: time.timeStart + ' / ' + time.timeEnd
+                    gridRow: timeRow(time.startTime) + ' / ' + timeRow(time.endTime)
                 }}
             >
-                <span className='event-title'>{title}</span><br/>
-                <span className='form-check event-todolist'>
+                <span className='event-title'>{subject}</span><br/>
+                {/* <span className='form-check event-todolist'>
                     <input className='form-check-input' type='checkbox' value='homework'></input>
                     <label className='form-check-label'>{activity}</label>
-                </span>
+                </span> */}
             </div>
         )
     })
+    
     return courseBlocks;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import NewCourseForm from './NewCourseForm';
+import AddCourseModal from './AddCourseModal';
 import WeekdayColumnNames from './WeekdayColumnNames';
 import TimeRowNames from './TimeRowNames';
 import CourseBlocks from './CourseBlocks';
@@ -23,10 +23,23 @@ export default function ScheduleGrid(props) {
 
     return (
         <section className='my-schedule-grid'>
-            <NewCourseForm />
-            <WeekdayColumnNames isMobile={isMobile} currentDay={props.currentDay} weekdayStrings={props.weekdayStrings} />
+            <AddCourseModal 
+                allCoursesData={props.allCoursesData} 
+                weekdayStrings={props.weekdayStrings} 
+                handleNewCourseChangeCallback={props.handleNewCourseChangeCallback}
+                addNewCourseCallback={props.addNewCourseCallback}
+            />
+            <WeekdayColumnNames 
+                isMobile={isMobile} 
+                selectedDate={props.selectedDate} 
+                weekdayStrings={props.weekdayStrings}
+            />
             <TimeRowNames />
-            <CourseBlocks eventData={props.eventData} isMobile={isMobile} currentDay={props.currentDay} />
+            <CourseBlocks 
+                allCoursesData={props.allCoursesData} 
+                isMobile={isMobile} 
+                selectedDate={props.selectedDate} 
+            />
         </section>
     )
 }

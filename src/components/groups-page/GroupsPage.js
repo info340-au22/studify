@@ -49,7 +49,10 @@ function GroupsNavBar(props) {
 function GroupsSearchForm(props) {
     const handleChange = props.handleChangeCallback;
     const handleClick = props.handleClickCallback;
-    const location = useLocation().pathname;
+    const groupUrl = useLocation().pathname;
+    const isCorrectGroupUrl = () => {
+        return (groupUrl === '/groups' || groupUrl === '/groups/create-groups')
+    }
 
     return (
         <Form className='d-flex flex-grow-1 flex-md-grow-0 order-first order-md-last pb-3 pb-md-0' role='search'>
@@ -59,13 +62,13 @@ function GroupsSearchForm(props) {
                 placeholder='Search Groups' 
                 aria-label='Search Groups' 
                 onChange={handleChange}
-                disabled={location === '/groups' ? true : false}
+                disabled={isCorrectGroupUrl()}
             />
             <Button 
                 variant='outline-info'
                 type='button' 
                 onClick={handleClick} 
-                disabled={location === '/groups' ? true : false}
+                disabled={isCorrectGroupUrl()}
             >
                 <span className='fa-solid fa-magnifying-glass'></span>
             </Button>

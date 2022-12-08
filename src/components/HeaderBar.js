@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function HeaderBar(props) {
     return (
