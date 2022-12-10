@@ -171,17 +171,6 @@ span.event-title {
   border-radius: 10px;
 }
 
-/* .time:nth-child(2n - 1):after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  width: 100%;
-  height: 1px;
-  background: #ccc;
-  z-index: -1;
-} */
-
-
 /* MY GROUPS */
 
 .my-groups .nav-link {
@@ -219,7 +208,8 @@ span.event-title {
 /* MY PROFILE */
 
 /* CREATE GROUP FEATURE */
-.create-group {
+
+.create-group-form {
   max-width: 400px;
   margin: auto;
   text-align: center;
@@ -228,36 +218,23 @@ span.event-title {
   padding: 70px;
 }
 
-.create-group label {
-  text-align: left;
-  display: block;
+.group-text {
+  text-align: center;
 }
 
-.create-group h1 {
+.group-textbox {
+  width:250px;
+}
+
+.create-group-form h1 {
   font-size: 30px;
   color: rgb(106, 189, 210);
   margin-bottom: 50px;
 }
 
-.create-group input, .create-group textarea {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  display: block;
-}
 
-.create-group button {
-  background-color: rgb(106, 203, 210);
-  color: #292c2f;
-  border: 0;
-  padding: 10px;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+/* Mision page */
 
-/*Mision page*/
 .mission-div {
   text-align:center;
 }
@@ -276,7 +253,8 @@ span.event-title {
   margin-top: 20px;
 }
 
-/*Creator page*/
+/* Creator page */
+
 .creator-div {
   text-align: center;
 }
@@ -307,7 +285,7 @@ span.event-title {
   font-family: "Gill Sans", sans-serif;
 }
 
-/*Contact page*/
+/* Contact page */
 .contact-box{
   max-width: 400px;
   text-align: center;
@@ -330,6 +308,7 @@ span.event-title {
   width : 300px;
   height :30px;
 }
+
 
 /* FOOTER */
 
@@ -555,4 +534,5 @@ p.footer-links a {
   .dropdown-item:focus {
     background-color: white;
   }
+  
 }

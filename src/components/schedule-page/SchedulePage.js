@@ -1,23 +1,69 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { getDatabase, onValue, ref, push as pushFirebase } from 'firebase/database';
 
 import WeekdaySelectForm from './WeekdaySelectForm';
 import ScheduleGrid from './ScheduleGrid';
-
-import COURSE_DATA from '../../data/courses.json';
 
 const DAYS_OF_THE_WEEK = [
     "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
 ];
 
 export default function SchedulePage(props) {
-
     let liveCurrentDay = DAYS_OF_THE_WEEK[new Date().getDay()];
 
-    const [currentDay, setCurrentDay] = useState(liveCurrentDay);
+    const [selectedDate, setSelectedDate] = useState(liveCurrentDay);
+    const [allCoursesData, setAllCoursesData] = useState([]);
+    const [subjectInput, setSubjectInput] = useState('');
+    const [dateInput, setDateInput] = useState('');
+    const [startTimeInput, setStartTimeInput] = useState('');
+    const [endTimeInput, setEndTimeInput] = useState('');
 
-    const handleChange = (event) => {
-        setCurrentDay(event.target.value);
+    useEffect(() => {
+        const db = getDatabase();
+        const allCoursesRef = ref(db, 'allCoursesData');
+
+        onValue(allCoursesRef, (snapshot) => {
+            const changedValue = snapshot.val();
+            
+            const objKeys = Object.keys(changedValue);
+            const allCoursesArray = objKeys.map((keyString) => {
+                const courseObj = changedValue[keyString];
+                courseObj.key = keyString;
+                return courseObj;
+            })
+            setAllCoursesData(allCoursesArray)
+        })
+    }, [])
+
+    const handleSelectedDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    }
+
+    const handleNewCourseChange = (event) => {
+        const eventId = event.target.id; 
+        const eventValue = event.target.value;
+
+        return eventId === 'controlSubjectInput' ? setSubjectInput(eventValue)
+                : eventId === 'controlDateInput' ? setDateInput(eventValue)
+                : eventId === 'controlStartTimeInput' ? setStartTimeInput(eventValue)
+                : eventId === 'controlEndTimeInput' ? setEndTimeInput(eventValue)
+                : '';
+    }
+
+    const addNewCourse = () => {
+        const db = getDatabase();
+        const allCoursesRef = ref(db, 'allCoursesData');
+
+        const newCourse = {
+            "subject": subjectInput.toUpperCase(),
+            "date": dateInput,
+            "time": {
+                "startTime": startTimeInput,
+                "endTime": endTimeInput
+            }
+        }
+        pushFirebase(allCoursesRef, newCourse)
     }
 
     return (
@@ -29,13 +75,15 @@ export default function SchedulePage(props) {
                 <h2>My Schedule</h2>
                 <WeekdaySelectForm 
                     weekdayStrings={DAYS_OF_THE_WEEK} 
-                    handleChangeCallback={handleChange} 
+                    handleChangeCallback={handleSelectedDateChange} 
                     liveCurrentDay={liveCurrentDay} 
                 />
                 <ScheduleGrid 
-                    eventData={COURSE_DATA} 
+                    allCoursesData={allCoursesData} 
                     weekdayStrings={DAYS_OF_THE_WEEK}
-                    currentDay={currentDay} 
+                    selectedDate={selectedDate} 
+                    handleNewCourseChangeCallback={handleNewCourseChange}
+                    addNewCourseCallback={addNewCourse}
                 />
             </main>
         </>
