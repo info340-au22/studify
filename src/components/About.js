@@ -32,16 +32,20 @@ export function Creators(props) {
             <h2>Behind the scence of <em>Studify</em></h2>
             <div className="creator-div">       
                 <div className="creator-text-div">
-                    <h4 className="h4-creator-tag">Minh Mai</h4>
+                    <h4 className=".h4-creator-tag">Minh Mai</h4>
+                    <div className="portrait">
+                        <img src="img/minh-mai.jpeg" alt="cool-cat1"/>
+                    </div>
                         <p className="creator-normal-text">Minh is a third-year student at the University of Washington studying Informatics. Minh is very interested in learning about Software Development 
                             and his career goal is to become a Front-End Developer. The first Studify idea was suggested by Minh, and he was the first to implement it. </p>
-                        <p className="creator-normal-text">To be able to contact Minh via email, you can visit at mcm2304@uw.edu</p>
                 </div>
                 <div className="creator-text-div">
-                    <h4 className="h4-creator-tag">Luong Quan</h4>
+                    <h4 className=".h4-creator-tag">Luong Quan</h4>
+                    <div className="portrait">
+                        <img src="img/luong-quan.jpg" alt="cool-cat2"/>
+                    </div>
                         <p className="creator-normal-text">Luong is a third-year student at the University of Washington studying Geography: Data Science. Luong is interested in Data Science, but he also wants 
                             to learn about Software Development. Luong's career goal is to become a Data Scientist. In the Studify project, Luong is the one who builds and contributes ideas with Minh to create Studify.</p>
-                        <p className="creator-normal-text">To be able to contact Luong via email, you can visit at luongq@uw.edu</p>
                 </div>
             </div>
         </main>

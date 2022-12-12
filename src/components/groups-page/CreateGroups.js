@@ -1,47 +1,51 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
+import { Form, Row, Col, Button } from 'react-bootstrap';
 
 //function to enter group name, group description, public/private choice and picture create.
-function CreateNewGroup(props) {
-    const [groupName, setGroupName] = useState('');
-    const [groupDescription, setGroupDescription] = useState('');
-    const [groupPublicity, setGroupPublicity] = useState('Public');
-    const [isPending, setIsPending] = useState(false);
+export default function CreateGroupsForm(props) {
+    const [isValid, setIsValid] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const group = {groupName, groupDescription, groupPublicity};
-        setIsPending(true);
-        fetch('http://localhost:3000/groups', {
-            method: 'POST',
-            headers: { "Content-type": "groups.json" },
-            body: JSON.stringify(group)
-        }).then(() => {
-            console.log('New group added');
-            setIsPending(false);
-        })
+    const handleNewGroupChangeCallBack = props.handleNewGroupChangeCallBack;
+    const addNewGroupCallBack = props.addNewGroupCallBack;
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        setIsValid(true);
+
+        addNewGroupCallBack();
     }
 
     return (
-        <div className="create-group">
-            <h2>Create new group</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Group name:</label>
-                <input type="text" required value={groupName} onChange={(e) => setGroupName(e.target.value)} />
-                <label>Group description:</label>
-                <textarea required value={groupDescription} onChange={(e) => setGroupDescription(e.target.value)}></textarea>
-                <select value={groupPublicity} onChange={(e) => setGroupPublicity(e.target.value)}>
-                    <option value="public">Public</option>
-                    <option value="private">Private</option>
-                </select> 
-                {!isPending && <button>Create Group</button>}
-                {isPending && <button>Creating Group</button>}
-            </form>
+        <div className="create-group-form">
+            <h1>Create new Group</h1>
+            <Form noValidate validated={isValid} onSubmit={handleSubmit} id='newGroupForm'>
+                <Row>
+                    <Col sm={12} lg={6}>
+                        <Form.Group className='mb-4' controlId='controlGroupNameInput'>
+                            <Form.Label>Group name</Form.Label>
+                            <Form.Control className='group-textbox' require type='text' autoFocus onChange={handleNewGroupChangeCallBack} />
+                            <Form.Control.Feedback type='invalid'>Please provide a group name!</Form.Control.Feedback>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm={12} lg={6}>
+                        <Form.Group className='mb-4' controlId='controlGroupDescripInput'>
+                            <Form.Label>Group description</Form.Label>
+                            <Form.Control className='group-textbox' require type='text' autoFocus onChange={handleNewGroupChangeCallBack} />
+                            <Form.Control.Feedback type='invalid'>Please provide a group description!</Form.Control.Feedback>
+                        </Form.Group>
+                    </Col>
+                </Row>
+            </Form>
+            <Button variant='primary' type='submit' form='newGroupForm'>
+                Create Group
+            </Button>
         </div>
-    )
-}
-
-export function CreateGroups(props) {
-    return (
-        < CreateNewGroup/>
     )
 }

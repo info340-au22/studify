@@ -8,8 +8,8 @@ import SchedulePage from './schedule-page/SchedulePage';
 import GroupsPage from './groups-page/GroupsPage';
 import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
-import { CreateGroups } from './groups-page/CreateGroups';
-import { Mission, Creators } from './About';
+import CreateGroupsForm from './groups-page/CreateGroups';
+import { Mission, Creators} from './About';
 import { Contact } from './Contact';
 import SignInPage from './SignInPage';
 import ProfilePage from './profile-page/ProfilePage';
@@ -83,7 +83,7 @@ export default function App(props) {
             element={ <GroupsPage handleChangeCallback={handleChange} handleClickCallback={handleClick} /> } >
             <Route path='my-groups' element={ <MyGroups groupData={searchGroupData} /> } />
             <Route path='join-groups' element={ <JoinGroups groupData={searchGroupData} /> } />
-            <Route path='create-groups' element={ <CreateGroups/> } />
+            <Route path='create-groups' element={ <CreateGroupsForm/>} />
             <Route index element={ <Navigate to='/groups/my-groups' /> } />
           </Route>
           <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />

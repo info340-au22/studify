@@ -209,41 +209,31 @@ span.event-title {
 
 /* CREATE GROUP FEATURE */
 
-div.create-group {
+.create-group-form {
   max-width: 400px;
-  margin: 0 auto;
+  margin: auto;
+  text-align: center;
+  width: 400px;
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
+  border-radius: 15px;
+  padding: 70px;
+}
+
+.group-text {
   text-align: center;
 }
 
-.create-group label {
-  text-align: left;
-  display: block;
+.group-textbox {
+  width:250px;
 }
 
-.create-group h2 {
-  font-size: 20px;
+.create-group-form h1 {
+  font-size: 30px;
   color: rgb(106, 189, 210);
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.create-group input, 
-.create-group textarea, 
-.create-group select {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  display: block;
-}
-
-.create-group button {
-  background-color: rgb(106, 203, 210);
-  color: #292c2f;
-  border: 0;
-  padding: 10px;
-  border-radius: 15px;
-  cursor: pointer;
-}
 
 /* Mision page */
 
@@ -269,16 +259,16 @@ div.create-group {
 
 .creator-div {
   text-align: center;
-}
-
-.creator h2 {
-  margin-bottom: 40px;
-}
-
-.creator-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.portrait img{
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
 }
 
 .h4-creator-tag {
@@ -287,37 +277,43 @@ div.create-group {
 
 .creator-text-div {
   width: 400px;
-  border: 5px solid rgb(106, 255, 208);
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
+  border-radius: 15px;
   padding: 50px;
   margin: 20px;
 }
 
 .creator-normal-text {
   margin-top: 20px;
+  margin-bottom: 30px;
   font-family: "Gill Sans", sans-serif;
 }
 
 /* Contact page */
-
-.firstbox {
-  flex: 1;
-  background-color : white;
-  margin-left: 100px;
-  margin-top :100px;
-  height : 500px;
-  width : 40%;
-  font-weight: bold;
-  text-decoration: solid;
-  font-family :'Times New Roman', Times, serif;
-  font-size :large;
-  padding-left: 30px;
-  border-radius: 20px;
-  margin-right: 40px;
+.contact-div h4 {
+  margin-bottom: 30px;
 }
 
-.contact-input{
-  width : 300px;
-  height :20px;
+.contact-div {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact-member-div {
+  width: 400px;
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
+  border-radius: 15px;
+  padding: 50px;
+  margin: 20px;
+}
+
+.contact-social-link {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* FOOTER */
