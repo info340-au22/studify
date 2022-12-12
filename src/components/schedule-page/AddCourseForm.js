@@ -10,13 +10,12 @@ export default function AddCourseForm(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
+        if (form.checkValidity()) {
+            addNewCourseCallback();
+        } else {
+            event.stopPropagation();
         }
         setValidated(true);
-
-        addNewCourseCallback();
     };
 
     const weekdayOptions = props.weekdayStrings.map((weekdayStr) => {
@@ -49,17 +48,17 @@ export default function AddCourseForm(props) {
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col sm={12} lg={6}>
                     <Form.Group className='mb-3' controlId='controlStartTimeInput'>
                         <Form.Label>Start Time</Form.Label>
-                        <Form.Control required type='time' min='08:00' max='07:30' step='1800' onChange={handleNewCourseChangeCallback} />
+                        <Form.Control required type='time' min='08:00' max='20:00' step='1800' onChange={handleNewCourseChangeCallback} />
                         <Form.Control.Feedback type='invalid'>Please provide a valid time.</Form.Control.Feedback>
                     </Form.Group>
                 </Col>
-                <Col>
+                <Col sm={12} lg={6}>
                     <Form.Group className='mb-3' controlId='controlEndTimeInput'>
                         <Form.Label>End Time</Form.Label>
-                        <Form.Control required type='time' min='08:30' max='20:00' step='1800' onChange={handleNewCourseChangeCallback} />
+                        <Form.Control required type='time' min='08:30' max='20:30' step='1800' onChange={handleNewCourseChangeCallback} />
                         <Form.Control.Feedback type='invalid'>Please provide a valid time.</Form.Control.Feedback>
                     </Form.Group>
                 </Col>

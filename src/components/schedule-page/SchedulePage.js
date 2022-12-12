@@ -11,6 +11,7 @@ const DAYS_OF_THE_WEEK = [
 
 export default function SchedulePage(props) {
     let liveCurrentDay = DAYS_OF_THE_WEEK[new Date().getDay()];
+    const currentUser = props.currentUser;
 
     const [selectedDate, setSelectedDate] = useState(liveCurrentDay);
     const [allCoursesData, setAllCoursesData] = useState([]);
@@ -21,9 +22,10 @@ export default function SchedulePage(props) {
 
     useEffect(() => {
         const db = getDatabase();
-        const allCoursesRef = ref(db, 'allCoursesData');
+        const userEventsDbRef = ref(db, 'userData/' + currentUser.id + '/userEvents')
+        console.log(props.currentUser)
 
-        onValue(allCoursesRef, (snapshot) => {
+        onValue(userEventsDbRef, (snapshot) => {
             const changedValue = snapshot.val();
             
             const objKeys = Object.keys(changedValue);
@@ -53,7 +55,7 @@ export default function SchedulePage(props) {
 
     const addNewCourse = () => {
         const db = getDatabase();
-        const allCoursesRef = ref(db, 'allCoursesData');
+        const userEventsDbRef = ref(db, 'userData/' + currentUser.id + '/userEvents')
 
         const newCourse = {
             "subject": subjectInput.toUpperCase(),
@@ -63,7 +65,7 @@ export default function SchedulePage(props) {
                 "endTime": endTimeInput
             }
         }
-        pushFirebase(allCoursesRef, newCourse)
+        pushFirebase(userEventsDbRef, newCourse)
     }
 
     return (

@@ -61,7 +61,7 @@ export function ProfileCard(props) {
                             className='rounded-circle' 
                             width='150'
                         />
-                        <div className='mt-3'>
+                        <div className='mt-3' style={{width: '50%'}}>
                             <h4>{currentUser.name}</h4>
                                 <p className='text-secondary mb-1'>{currentUser.job}</p>
                                 <p className='text-muted font-size-sm'>{currentUser.location}</p>

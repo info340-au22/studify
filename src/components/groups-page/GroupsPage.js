@@ -51,7 +51,7 @@ function GroupsSearchForm(props) {
     const handleClick = props.handleClickCallback;
     const groupUrl = useLocation().pathname;
     const isCorrectGroupUrl = () => {
-        return (groupUrl === '/groups' || groupUrl === '/groups/create-groups')
+        return (groupUrl === '/groups/create-groups')
     }
 
     return (

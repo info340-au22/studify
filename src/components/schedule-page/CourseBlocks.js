@@ -14,12 +14,10 @@ export default function CourseBlocks(props) {
 
     const courseBlocks = (isMobile ? mobileAllCoursesData : allCoursesData).map((courseObj) => {
         const { date, key, subject, time } = courseObj;
-        
         const timeRow = (timeString) => {            
             return 'time-'.concat(timeString.replace(':', ''));
         }
-
-        return (
+        return (      
             <div 
                 key={key}
                 className={'event'}
@@ -29,13 +27,9 @@ export default function CourseBlocks(props) {
                 }}
             >
                 <span className='event-title'>{subject}</span><br/>
-                {/* <span className='form-check event-todolist'>
-                    <input className='form-check-input' type='checkbox' value='homework'></input>
-                    <label className='form-check-label'>{activity}</label>
-                </span> */}
-            </div>
+
+            </div>    
         )
     })
-    
-    return courseBlocks;
+    return courseBlocks
 }

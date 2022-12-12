@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { getAuth, signOut } from 'firebase/auth';
 
 export default function HeaderBar(props) {
     return (
@@ -45,8 +46,13 @@ function NavBar(props) {
 }
 
 function SignOutButton(props) {
+    const handleSignOut = (event) => {
+        console.log("signing out");
+        signOut(getAuth());
+    }
+
     return (
-        <button className='btn btn-secondary sign-out ms-lg-3 order-lg-last' type='button'>
+        <button className='btn btn-secondary sign-out ms-lg-3 order-lg-last' type='button' onClick={handleSignOut}>
             <span className='fa-solid fa-right-from-bracket'></span>
             <span className='d-none d-lg-inline'> Sign Out</span>
         </button>

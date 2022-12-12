@@ -3,9 +3,9 @@ import React from 'react';
 export function ProfileInformation(props) {
     const currentUser = props.currentUser;
 
-    const displayedUserInfo = ['name', 'username', 'email', 'phone', 'school'];
+    const displayedUserInfo = ['name', 'email', 'phone', 'school'];
     
-    const userInfoDiv = displayedUserInfo.map((userInfo) => {
+    const userInfoDiv = displayedUserInfo.map((userInfo, index) => {
         let userContent = '';
         let userContentInfo = '';
         
@@ -14,7 +14,7 @@ export function ProfileInformation(props) {
             userContentInfo = currentUser[userInfo];
 
             const userElement = (
-                <React.Fragment key={userContentInfo}>
+                <React.Fragment key={index + 1}>
                     <div className='row'>
                         <div className='col-sm-4'>{userContent}</div>
                         <div className='col-sm-8 text-secondary text-md-end'>{userContentInfo}</div>

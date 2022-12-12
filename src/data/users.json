@@ -1,5 +1,22 @@
 [
     {
+        "displayName": null,
+        "username": "minh23",
+        "email": "mcm2304@uw.edu",
+        "phone": "(206) 495-7480",
+        "school": "University of Washington",
+        "job": "Front-End Developer",
+        "location": "Seattle, WA",
+        "social-media": {
+            "facebook": "https://facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://instagram.com/",
+            "linkedin": "https://linkedin.com/",
+            "github": "https://github.com/"
+        },
+        "image": "../img/minh-mai.jpeg"
+    },
+    {
         "name": "Minh Mai",
         "username": "minh23",
         "email": "mcm2304@uw.edu",

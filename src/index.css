@@ -7,7 +7,7 @@
   
 } */
 
-.studify-app {
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -546,3 +546,12 @@ p.footer-links a {
   }
   
 }
+
+.event-content .modal-backdrop.fade {
+  opacity: 0.1;
+  /* filter: alpha(opacity=0.1); */
+}
+/* .modal-backdrop.fade.in {
+opacity: 0.5;
+filter: alpha(opacity=1);
+} */
