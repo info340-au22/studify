@@ -6,7 +6,7 @@ import SchedulePage from './schedule-page/SchedulePage';
 import GroupsPage from './groups-page/GroupsPage';
 import { MyGroups } from './groups-page/MyGroups';
 import { JoinGroups } from './groups-page/JoinGroups';
-import { CreateGroups } from './groups-page/CreateGroups';
+import CreateGroupsForm from './groups-page/CreateGroups';
 import { Mission, Creators} from './About';
 import { Contact } from './Contact';
 import ProfilePage from './profile-page/ProfilePage';
@@ -46,7 +46,7 @@ export default function App(props) {
           <Route index element={ <MyGroups groupData={searchGroupData} /> } />
           <Route path='my-groups' element={ <MyGroups groupData={searchGroupData} /> } />
           <Route path='join-groups' element={ <JoinGroups groupData={searchGroupData} /> } />
-          <Route path='create-groups' element={ <CreateGroups/>} />
+          <Route path='create-groups' element={ <CreateGroupsForm/>} />
         </Route>
         <Route path='/about' element={ <Mission/> }/>
         <Route path='/team-members' element={ <Creators/> }/>
