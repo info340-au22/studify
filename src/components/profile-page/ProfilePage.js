@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import { ProfileCard } from './ProfileCard';
 import { ProfileInformation } from './ProfileInformation';
-import EditProfileModal from './EditProfileForm';
 
 export default function ProfilePage(props) {
     return (

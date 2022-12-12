@@ -50,7 +50,7 @@ export default function App(props) {
         </Route>
         <Route path='/about' element={ <Mission/> }/>
         <Route path='/team-members' element={ <Creators/> }/>
-        <Route path='/contact-us' element={ <Contact/> }/>
+        <Route path='/contact-us' element={ <Contact /> }/>
         <Route path='/profile' element={ <ProfilePage currentUser={currentUser} /> } />
         <Route path='*' element={ <Static.ErrorPage />} />
       </Routes>

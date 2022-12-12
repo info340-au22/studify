@@ -214,7 +214,9 @@ span.event-title {
   margin: auto;
   text-align: center;
   width: 400px;
-  border: 5px solid rgb(106, 255, 208);
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
+  border-radius: 15px;
   padding: 70px;
 }
 
@@ -257,16 +259,16 @@ span.event-title {
 
 .creator-div {
   text-align: center;
-}
-
-.creator h2 {
-  margin-bottom: 40px;
-}
-
-.creator-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.portrait img{
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
 }
 
 .h4-creator-tag {
@@ -275,40 +277,44 @@ span.event-title {
 
 .creator-text-div {
   width: 400px;
-  border: 5px solid rgb(106, 255, 208);
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
+  border-radius: 15px;
   padding: 50px;
   margin: 20px;
 }
 
 .creator-normal-text {
   margin-top: 20px;
+  margin-bottom: 30px;
   font-family: "Gill Sans", sans-serif;
 }
 
 /* Contact page */
-.contact-box{
-  max-width: 400px;
+.contact-div h4 {
+  margin-bottom: 30px;
+}
+
+.contact-div {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact-member-div {
   width: 400px;
-  border: 5px solid rgb(106, 255, 208);
-  padding: 50px;
-  margin: auto;
-}
-
-.share-button {
-  background-color: rgb(106, 203, 210);
-  color: #292c2f;
-  border: 0;
-  padding: 10px;
+  border: 2px solid rgb(199, 191, 191);
+  box-shadow: 4px 5px 4px rgb(199, 191, 191);
   border-radius: 15px;
-  cursor: pointer;
+  padding: 50px;
+  margin: 20px;
 }
 
-.contact-input{
-  width : 300px;
-  height :30px;
+.contact-social-link {
+  display: flex;
+  justify-content: space-evenly;
 }
-
 
 /* FOOTER */
 
