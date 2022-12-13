@@ -3,11 +3,7 @@
   font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
-/* :root {
-  
-} */
-
-#root {
+.studify-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -171,6 +167,10 @@ span.event-title {
   border-radius: 10px;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 /* MY GROUPS */
 
 .my-groups .nav-link {
@@ -197,7 +197,8 @@ span.event-title {
 }
 
 .my-groups .card-body,
-.my-groups .card-footer {
+.my-groups .card-footer,
+.my-groups a.nav-link {
   font-size: 14px;
 }
 
@@ -205,35 +206,25 @@ span.event-title {
   font-size: 18px;
 }
 
-/* MY PROFILE */
 
 /* CREATE GROUP FEATURE */
 
 .create-group-form {
   max-width: 400px;
-  margin: auto;
   text-align: center;
-  width: 400px;
+  margin: auto;
   border: 2px solid rgb(199, 191, 191);
   box-shadow: 4px 5px 4px rgb(199, 191, 191);
   border-radius: 15px;
-  padding: 70px;
+  padding: 50px;
+  transform: scale(0.85);
 }
 
-.group-text {
-  text-align: center;
-}
-
-.group-textbox {
-  width:250px;
-}
-
-.create-group-form h1 {
+.create-group-form h3 {
   font-size: 30px;
   color: rgb(106, 189, 210);
   margin-bottom: 50px;
 }
-
 
 /* Mision page */
 
@@ -291,6 +282,7 @@ span.event-title {
 }
 
 /* Contact page */
+
 .contact-div h4 {
   margin-bottom: 30px;
 }
@@ -389,7 +381,7 @@ p.footer-links a {
   transition: all .25s;
 }
 
-/* STATIC PAGES */
+/* ERROR PAGE */
 
 .error-page {
   display: grid;
@@ -468,7 +460,8 @@ p.footer-links a {
   }
 
   .my-groups .card-body,
-  .my-groups .card-footer {
+  .my-groups .card-footer,
+  .my-groups a.nav-link {
       font-size: 16px;
   }
   
@@ -478,6 +471,10 @@ p.footer-links a {
 
   .my-profile form {
       margin: auto 10em;
+  }
+
+  .create-group-form {
+    transform: scale(1);
   }
 
   .creator-normal-text {
@@ -542,12 +539,3 @@ p.footer-links a {
   }
   
 }
-
-.event-content .modal-backdrop.fade {
-  opacity: 0.1;
-  /* filter: alpha(opacity=0.1); */
-}
-/* .modal-backdrop.fade.in {
-opacity: 0.5;
-filter: alpha(opacity=1);
-} */

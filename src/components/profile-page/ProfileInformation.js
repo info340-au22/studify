@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getDatabase, ref, onValue } from 'firebase/database';
+
+import ProfileEditForm from './ProfileEditForm';
 
 export function ProfileInformation(props) {
     const currentUser = props.currentUser;
+    const [currentUserDetails, setCurrentUserDetails] = useState(props.currentUserDetails);
+
+    useEffect(() => {
+        const db = getDatabase();
+        const userDetailsRef = ref(db, 'userData/' + currentUser.id + '/userDetails')
+
+        const unregisteredFunction = onValue(userDetailsRef, (snapshot) => {
+            const changedValue = snapshot.val();
+            setCurrentUserDetails(changedValue)
+        })
+
+        function cleanup() {
+            unregisteredFunction();
+        }
+        return cleanup;
+    
+    }, [])
 
     const displayedUserInfo = ['name', 'email', 'phone', 'school'];
     
@@ -9,9 +29,9 @@ export function ProfileInformation(props) {
         let userContent = '';
         let userContentInfo = '';
         
-        if (Object.keys(currentUser).includes(userInfo)) {
+        if (Object.keys(currentUserDetails).includes(userInfo)) {
             userContent = userInfo.charAt(0).toUpperCase() + userInfo.slice(1);
-            userContentInfo = currentUser[userInfo];
+            userContentInfo = currentUserDetails[userInfo];
 
             const userElement = (
                 <React.Fragment key={index + 1}>
@@ -32,9 +52,7 @@ export function ProfileInformation(props) {
                 <div className='card-body'>
                     {userInfoDiv}
                     <div className='row'>
-                        <div className='col-sm-12 text-center'>
-                            <a className='btn btn-info' href='#'>Edit</a>
-                        </div>
+                        <ProfileEditForm currentUser={props.currentUser} currentUserDetails={currentUserDetails} />
                     </div>
                 </div>
             </div>

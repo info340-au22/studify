@@ -5,7 +5,6 @@ import WeekdayColumnNames from './WeekdayColumnNames';
 import TimeRowNames from './TimeRowNames';
 import CourseBlocks from './CourseBlocks';
 
-
 export default function ScheduleGrid(props) {
     const [widthDimension, setWidthDimension] = useState(window.innerWidth);
  

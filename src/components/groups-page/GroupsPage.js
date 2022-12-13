@@ -1,54 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Nav, Button, Form } from 'react-bootstrap';
-import { getDatabase, onValue, ref, push as pushFirebase } from 'firebase/database';
-import CreateGroupsForm from './CreateGroups';
 
 export default function GroupsPage(props) {
-    const [allGroupsData, setAllGroupsData] = useState([]);
-    const [groupNameInput, setgroupNameInput] = useState('');
-    const [groupDescripInput, setgroupDescripInput] = useState('');
-
-    const handleChange = props.handleChangeCallback;
-    const handleClick = props.handleClickCallback;
-
-    useEffect(() => {
-        const db = getDatabase();
-        const allGroupsRef = ref(db, 'allGroupsData');
-
-        onValue(allGroupsRef, (groups) => {
-            const changedValue = groups.val();
-
-            const objKeys = Object.keys(changedValue);
-            const allGroupsArray = objKeys.map((keyString) => {
-                const groupObj = changedValue[keyString];
-                groupObj.key = keyString;
-                return groupObj;
-            })
-            setAllGroupsData(allGroupsArray);
-        })
-    })
-
-    const handleNewGroupChange = (event) => {
-        const eventId = event.target.id;
-        const eventValue = event.target.value;
-
-        return eventId === 'controlGroupNameInput' ? setgroupNameInput(eventValue)
-                : eventId === 'controlgroupDescripInput' ? setgroupDescripInput(eventValue)
-                : '';
-    }
-
-    const addNewGroup = () => {
-        const db = getDatabase();
-        const allGroupsRef = ref(db, 'allGroupsData');
-
-        const newGroup = {
-            "groupName": groupNameInput,
-            "groupDescription": groupDescripInput
-        }
-        pushFirebase(allGroupsRef, newGroup)
-    }
+    const handleSearchQueryChange = props.handleSearchQueryChangeCallback;
+    const handleSearchClick = props.handleSearchClickCallback;
 
     return (
         <>
@@ -62,8 +19,8 @@ export default function GroupsPage(props) {
                         <div className='container-fluid bg-light p-0'>
                             <GroupsNavBar />
                             <GroupsSearchForm 
-                                handleChangeCallback={handleChange} 
-                                handleClickCallback={handleClick}
+                                handleSearchQueryChangeCallback={handleSearchQueryChange} 
+                                handleSearchClickCallback={handleSearchClick}
                             />
                         </div>
                     </nav>
@@ -91,8 +48,8 @@ function GroupsNavBar(props) {
 }
 
 function GroupsSearchForm(props) {
-    const handleChange = props.handleChangeCallback;
-    const handleClick = props.handleClickCallback;
+    const handleSearchQueryChange = props.handleSearchQueryChangeCallback;
+    const handleSearchClick = props.handleSearchClickCallback;
     const groupUrl = useLocation().pathname;
     const isCorrectGroupUrl = () => {
         return (groupUrl === '/groups/create-groups')
@@ -105,13 +62,13 @@ function GroupsSearchForm(props) {
                 type='search' 
                 placeholder='Search Groups' 
                 aria-label='Search Groups' 
-                onChange={handleChange}
+                onChange={handleSearchQueryChange}
                 disabled={isCorrectGroupUrl()}
             />
             <Button 
                 variant='outline-info'
                 type='button' 
-                onClick={handleClick} 
+                onClick={handleSearchClick} 
                 disabled={isCorrectGroupUrl()}
             >
                 <span className='fa-solid fa-magnifying-glass'></span>

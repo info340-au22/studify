@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { getDatabase, onValue, ref, push as pushFirebase } from 'firebase/database';
+import { getDatabase, onValue, ref, push as firebasePush } from 'firebase/database';
 
 import WeekdaySelectForm from './WeekdaySelectForm';
 import ScheduleGrid from './ScheduleGrid';
 
 const DAYS_OF_THE_WEEK = [
-    "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
+    'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'
 ];
 
 export default function SchedulePage(props) {
@@ -23,9 +23,8 @@ export default function SchedulePage(props) {
     useEffect(() => {
         const db = getDatabase();
         const userEventsDbRef = ref(db, 'userData/' + currentUser.id + '/userEvents')
-        console.log(props.currentUser)
 
-        onValue(userEventsDbRef, (snapshot) => {
+        const unregisteredFunction = onValue(userEventsDbRef, (snapshot) => {
             const changedValue = snapshot.val();
             
             const objKeys = Object.keys(changedValue);
@@ -36,6 +35,12 @@ export default function SchedulePage(props) {
             })
             setAllCoursesData(allCoursesArray)
         })
+
+        function cleanup() {
+            unregisteredFunction();
+        }
+        return cleanup;
+        
     }, [])
 
     const handleSelectedDateChange = (event) => {
@@ -58,14 +63,14 @@ export default function SchedulePage(props) {
         const userEventsDbRef = ref(db, 'userData/' + currentUser.id + '/userEvents')
 
         const newCourse = {
-            "subject": subjectInput.toUpperCase(),
-            "date": dateInput,
-            "time": {
-                "startTime": startTimeInput,
-                "endTime": endTimeInput
+            'subject': subjectInput.toUpperCase(),
+            'date': dateInput,
+            'time': {
+                'startTime': startTimeInput,
+                'endTime': endTimeInput
             }
         }
-        pushFirebase(userEventsDbRef, newCourse)
+        firebasePush(userEventsDbRef, newCourse)
     }
 
     return (

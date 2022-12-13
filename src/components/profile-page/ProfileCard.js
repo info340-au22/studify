@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 const SOCIAL_MEDIA = [
     { 
@@ -30,6 +31,23 @@ const SOCIAL_MEDIA = [
 
 export function ProfileCard(props) {
     const currentUser = props.currentUser;
+    const [currentUserDetails, setCurrentUserDetails] = useState(props.currentUserDetails);
+
+    useEffect(() => {
+        const db = getDatabase();
+        const userDetailsRef = ref(db, 'userData/' + currentUser.id + '/userDetails')
+
+        const unregisteredFunction = onValue(userDetailsRef, (snapshot) => {
+            const changedValue = snapshot.val();
+            setCurrentUserDetails(changedValue)
+        })
+
+        function cleanup() {
+            unregisteredFunction();
+        }
+        return cleanup;
+    
+    }, [])
 
     const socialMediaLink = SOCIAL_MEDIA.map((socialMediaObj) => {
         const platform = socialMediaObj.platform;
@@ -39,8 +57,8 @@ export function ProfileCard(props) {
         const linkElement = (
             <a 
                 key={platform}
-                className='social-media'
-                href={currentUser['social-media'][platform]}
+                className={`social-media ${!currentUserDetails[platform] ? 'disabled' : ''}`}
+                href={currentUserDetails[platform]}
                 target='_blank' 
                 style={{color: color}}
             >
@@ -56,15 +74,15 @@ export function ProfileCard(props) {
                 <div className='card-body'>
                     <div className='d-flex flex-column align-items-center text-center'>
                         <img 
-                            src={currentUser.image} 
-                            alt={currentUser.name + ' Avatar'} 
+                            src={currentUserDetails.image} 
+                            alt={currentUserDetails.name + ' Avatar'} 
                             className='rounded-circle' 
                             width='150'
                         />
                         <div className='mt-3' style={{width: '50%'}}>
-                            <h4>{currentUser.name}</h4>
-                                <p className='text-secondary mb-1'>{currentUser.job}</p>
-                                <p className='text-muted font-size-sm'>{currentUser.location}</p>
+                            <h4>{currentUserDetails.name}</h4>
+                                <p className='text-secondary mb-1'>{currentUserDetails.job}</p>
+                                <p className='text-muted font-size-sm'>{currentUserDetails.location}</p>
                             <div className='d-flex justify-content-between'>
                                 {socialMediaLink}
                             </div>

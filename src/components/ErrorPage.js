@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function ErrorPage(props) {
+export default function ErrorPage(props) {
     return (
         <main className="container error-page text-center">
             <div className="error-404">

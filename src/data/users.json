@@ -1,36 +1,19 @@
 [
     {
         "displayName": null,
-        "username": "minh23",
-        "email": "mcm2304@uw.edu",
-        "phone": "(206) 495-7480",
-        "school": "University of Washington",
-        "job": "Front-End Developer",
-        "location": "Seattle, WA",
+        "username": null,
+        "email": null,
+        "phone": null,
+        "school": null,
+        "job": null,
+        "location": null,
         "social-media": {
-            "facebook": "https://facebook.com/",
-            "twitter": "https://twitter.com/",
-            "instagram": "https://instagram.com/",
-            "linkedin": "https://linkedin.com/",
-            "github": "https://github.com/"
+            "facebook": null,
+            "twitter": null,
+            "instagram": null,
+            "linkedin": null,
+            "github": null
         },
-        "image": "../img/minh-mai.jpeg"
-    },
-    {
-        "name": "Minh Mai",
-        "username": "minh23",
-        "email": "mcm2304@uw.edu",
-        "phone": "(206) 495-7480",
-        "school": "University of Washington",
-        "job": "Front-End Developer",
-        "location": "Seattle, WA",
-        "social-media": {
-            "facebook": "https://facebook.com/",
-            "twitter": "https://twitter.com/",
-            "instagram": "https://instagram.com/",
-            "linkedin": "https://linkedin.com/",
-            "github": "https://github.com/"
-        },
-        "image": "../img/minh-mai.jpeg"
+        "image": null
     }
 ]
